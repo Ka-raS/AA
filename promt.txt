@@ -1,1 +1,9 @@
-hãy đọc BRIEF để tiếp tục phiên làm việc làm RISK REGISTER. Có những câu hỏi gì cần tôi trả lời để hoàn thiện thông tin cần có trước và trong khi làm thì hãy hỏi tôi
+- sửa số trang của Risk Register phải là "of 4" chứ không phải "of 1".
+- các kí hiệu (A) (B) trên tiêu đề cột nghĩa là sao? Tôi nghĩ là nên viết giống sách chứ không như kiểu "Score (C = A x MAX(B1:B4))", nếu muốn thì chú thích ở dưới bảng. Bạn nghĩ sao?
+- cột Risk Statement và Response dài mà width nhỏ quá, trong khi các cột khác giá trị chỉ có đúng 1 chữ cái, hãy căn chỉnh lại. Và không chỉ riêng phần đó, các cột của bảng khác cũng xuất hiện lỗi như vậy.
+- trang 1 hãy đóng bìa như frame.docx, nhưng để tiếng anh và Arial
+
+Sau đó:
+
+- xem lại từ đầu đến cuối, tìm những điểm sai logic/không hợp lý/không ăn khớp/cần chỉnh sửa/quá dài dòng rồi sửa.
+- cập nhật lại BRIEF.md
