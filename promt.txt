@@ -2,11 +2,39 @@ Tôi đan cần gộp lại và xử lý xung đột nội dung của tất cả
 
 Hãy ưu tiên những file mới hơn, vì chúng đã được sửa nhiều lỗi.
 
-Các file notes là các chỉnh sửa mà tôi đề xuất cho 2 file docx và xml. Chúng có thể chưa được sửa, hoặc đã được sửa.
+Các file notes là các chỉnh sửa mà tôi đề xuất cho 2 file docx và xml. Chúng có thể chưa được sửa, hoặc đã được sửa. Sau khi làm xong mọi thức, các file notes này cần được xóa.
 
 2 file .pdf là bài giảng, lấy thông tin từ đó làm gốc, bạn sẽ phải xem A_Project_Managers_Book_of_Forms-2.pdf nhiều vì tôi làm các bảng biểu dựa theo nó, và PMBOK-6-EN.pdf để lấy dữ liệu tham khảo thêm khi làm từng bảng biểu.
 
-file docx nên trình bày bảng biểu theo thứ tự giống trong giáo trình, tôi note lại các bảng biểu ở trang bao nhiêu trong A_Project_Managers_Book_of_Forms-2.pdf như sau:
+file docx nên trình bày bảng biểu theo thứ tự giống trong giáo trình, tôi note lại các bảng biểu ở trang vật lý bao nhiêu trong A_Project_Managers_Book_of_Forms-2.pdf như sau:
+1. CREATE PROJECT CHARTER
+   Create Project Charter: Trang 13–19 (PDF).
+   - Requirements Documentation: Trang 48–50 (PDF).
+   - Project Scope Statement: Trang 56–59 (PDF).
+
+2. CREATE WBS
+   Requirements Traceability Matrix: Trang 51–55 (PDF).
+   Work Breakdown Structure (WBS): Trang 60–62 (PDF).
+   WBS Dictionary: Trang 63–66 (PDF).
+
+3. CREATE PROJECT SCHEDULE
+   Project Schedule: Trang 89–92 (PDF).
+
+4. CREATE COST ESTIMATION
+   Cost Estimates: Trang 96–98 (PDF).
+   Cost Estimating Worksheet: Trang 99–103 (PDF).
+
+5. CREATE QUALITY MANAGEMENT PLAN
+   Quality Management Plan: Trang 106–109 (PDF).
+
+6. RESOURCE MANAGEMENT
+   Team Charter: Trang 120–123 (PDF).
+   Resource Requirements: Trang 124–126 (PDF).
+   Resource Breakdown Structure: Trang 127–128 (PDF).
+
+7. CREATE RISK REGISTER
+   Risk Register: Trang 139–141 (PDF).
+
 
 
 Lưu ý về file .xml (.mpp của microsoft project): Bạn không xuất thành pdf được đâu, khi làm xong phải bảo tôi thao tác xuất để nhúng lại vào .docx
