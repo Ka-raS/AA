@@ -141,4 +141,30 @@ for k, a in rd.items():
 alltext = "\n".join(p_text(p) for p in body.iter(q("p")))
 for pat in ["cost.docx", "resource.docx", "quality.docx", "Function List", "SRS Section", "one block", "Sponsor/instructor", "Prime Minister", "second National Day", " 4,400 ", "running stably", "strictly", "significantly", "Quickly", "relevant results", "minor changes", "full CRUD", "complete CRUD", "short lessons", "Page 1 of", "his own code"]:
     if pat in alltext: bad(f"leftover phrase: {pat}")
+# Risk register: each "RISK REGISTER" table (ID..Response) is followed by its lower table (ID, Revised..Comments)
+up, low = {}, {}
+for t in by_title("RISK REGISTER"):
+    lt = t.getnext()
+    while lt is not None and lt.tag != q("tbl"): lt = lt.getnext()
+    for row in R(t):
+        if re.fullmatch(r"R-\d\d", row[0]): up[row[0]] = row
+    for row in R(lt):
+        if re.fullmatch(r"R-\d\d", row[0]): low[row[0]] = row
+if up:
+    if list(up) != list(low): bad("RiskReg: upper and lower IDs differ")
+    if list(up) != [f"R-{i:02d}" for i in range(1, len(up) + 1)]: bad("RiskReg: IDs not consecutive")
+    for k, row in up.items():
+        a, b = int(row[3]), [int(x) for x in row[4:8]]
+        if not all(1 <= v <= 5 for v in [a] + b) or int(row[8]) != a * max(b): bad(f"RiskReg {k} score")
+        if row[2] not in INV: bad(f"RiskReg {k} owner '{row[2]}'")
+        lr = low.get(k)
+        if not lr: continue
+        d_, e = int(lr[1]), [int(x) for x in lr[2:6]]
+        if not all(1 <= v <= 5 for v in [d_] + e) or int(lr[6]) != d_ * max(e): bad(f"RiskReg {k} revised score")
+        if lr[7] not in INV: bad(f"RiskReg {k} responsible party '{lr[7]}'")
+        if lr[9] not in ("Open", "Closed"): bad(f"RiskReg {k} status '{lr[9]}'")
+    rng_txt = f"R-01 to R-{len(up):02d}"
+    for m in re.findall(r"R-01 to R-\d\d", alltext):
+        if m != rng_txt: bad(f"RiskReg: text says '{m}', register has {rng_txt}")
+    print("Risk register:", len(up), "risks")
 print("PROBLEMS:", len(P))

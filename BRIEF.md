@@ -65,7 +65,9 @@
   - Team Charter (2)
   - Resource Requirements: người + PR-01..PR-12 (4)
   - Resource Breakdown Structure (1)
-- **7. CREATE RISK REGISTER** — **chưa có**, là việc tiếp theo (giáo trình trang vật lý 139–141).
+- **7. CREATE RISK REGISTER** (4) — xong ngày 04/11/2026. Khổ dọc, mỗi trang có bảng trên (ID..Response) và bảng dưới (ID, Revised..Comments) cho 3 rủi ro; trang 4 có thêm bảng "Probability and Impact Scale (1-5)".
+  - R-01..R-12. Thang 1–5. Score C = A x MAX(B1:B4), Revised F = D x MAX(E1:E4). Date Prepared September 29, 2026; tất cả Open. Cao nhất là R-02 WebSocket (16).
+  - Đã thêm tham chiếu ở: Charter Key Deliverables ("Risk Register"), Scope Statement mục 1.7, WBS Dictionary 1.7 (Description, Assumptions, Quality Requirements).
 
 Tìm bảng bằng chữ ở ô đầu tiên (ví dụ `"ACTIVITY COST ESTIMATES"`), không dùng chỉ số.
 
@@ -144,5 +146,5 @@ Tìm bảng bằng chữ ở ô đầu tiên (ví dụ `"ACTIVITY COST ESTIMATES
   - trong Bash không dùng `cat > file` mà không có heredoc (lệnh sẽ treo).
 
 ## 8. Việc còn dở
-1. **Risk Register** — việc tiếp theo.
+1. ~~Risk Register~~ — xong (mục 4). Cách dựng xem `tools/build_rr.py` (chỉ để tham khảo, script dừng nếu register đã có); `check2.py` đã kiểm tra thêm score, ID, owner, status của register.
 2. Nhúng `schedule.pdf` vào ô placeholder ở mục 3. Hỏi user muốn chèn dạng ảnh hay object; nếu thêm trang thì footer phải đếm đúng.
