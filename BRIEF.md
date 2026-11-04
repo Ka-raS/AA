@@ -23,7 +23,6 @@
 - `schedule.pdf` — Gantt user đã xuất từ 4.xml (2 trang, khổ lớn 34x22 in). **Chưa nhúng** vào ô placeholder ở mục 3 của 4.docx.
 - `Setup_Schedule_View.bas` — macro MS Project dựng bảng WBS | Task Name | Duration | Start | Finish | WBS Predecessors | Resource Names. Phím F của user là phím âm lượng, nên chỉ hướng dẫn thao tác bằng menu (View → Macros…).
 - `promt.txt` — yêu cầu hiện tại của user. `tools/` — script hỗ trợ (mục 7).
-- `frame.docx` (mẫu bìa PTIT) đã dùng xong và được chuyển ra khỏi AA/ (04/11/2026); hai ảnh của nó (khung viền, logo PTIT) nằm sẵn trong 4.docx.
 
 ## 3. Quy tắc bắt buộc
 - **Không dùng git** dưới mọi hình thức (user cấm từ 04/11/2026).
@@ -42,7 +41,7 @@
   - mỗi biểu mẫu là **một section**, footer căn giữa `Page {PAGE} of {SECTIONPAGES}`, đánh số trang lại từ 1 (`tools/footers.py`), sau đó ghi số trang thật vào giá trị lưu sẵn của trường (`tools/pagecount.py`) để trình xem không cập nhật trường vẫn hiện đúng "of N";
   - tiêu đề nhóm dạng `N. CREATE ...` (Arial đậm 13 pt, outline level 1) — dùng `dlib.heading_par`;
   - đoạn ngắt section sau bảng cuối của form cao 1 pt, không có đoạn trống thừa trước nó (tránh trang trắng).
-- Bìa: bố cục theo frame.docx (khung viền ảnh nằm sau chữ, logo PTIT), tiếng Anh, Arial: POSTS AND TELECOMMUNICATIONS INSTITUTE OF TECHNOLOGY / FACULTY OF INFORMATION TECHNOLOGY 1 / logo / PROJECT MANAGEMENT DOCUMENTS / tên dự án / COURSE: Software Project Management / bảng Class – Students (4 người + mã SV) – Instructor / Hanoi – 2026. Bìa không có footer.
+- Bìa (trang 1, user yêu cầu 05/11/2026): font **Times New Roman** (ngoại lệ duy nhất so với quy tắc font Arial), gồm POSTS AND TELECOMMUNICATIONS INSTITUTE OF TECHNOLOGY / FACULTY OF INFORMATION TECHNOLOGY 1 / logo PTIT / ASSIGNMENT REPORT / tên dự án / COURSE: Software Project Management / bảng Class E23CNPM02, Group 04, Students (4 người + mã SV), Instructor / Hanoi – 2026. Khung viền và logo PTIT là hai ảnh trong 4.docx (rId26/rId27). Không đổi bìa trừ khi user yêu cầu. Bìa không có footer.
 - Sửa docx bằng python-docx + lxml (`tools/dlib.py`). Word chỉ dùng qua COM để xuất PDF kiểm tra bố cục. **Không kill WINWORD** (bị chặn); `topdf.ps1` tự đóng Word.
 
 ## 4. Cấu trúc 4.docx (trong ngoặc là số trang)
