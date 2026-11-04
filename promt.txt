@@ -1,7 +1,7 @@
 - sửa số trang của Risk Register phải là "of 4" chứ không phải "of 1".
 - các kí hiệu (A) (B) trên tiêu đề cột nghĩa là sao? Tôi nghĩ là nên viết giống sách chứ không như kiểu "Score (C = A x MAX(B1:B4))", nếu muốn thì chú thích ở dưới bảng. Bạn nghĩ sao?
 - cột Risk Statement và Response dài mà width nhỏ quá, trong khi các cột khác giá trị chỉ có đúng 1 chữ cái, hãy căn chỉnh lại. Và không chỉ riêng phần đó, các cột của bảng khác cũng xuất hiện lỗi như vậy.
-- trang 1 hãy đóng bìa như frame.docx, nhưng để tiếng anh và Arial
+- trang 1 hãy đóng bìa như frame.docx, nhưng để tiếng anh và Arial, rồi xóa frame.docx
 
 Sau đó:
 
