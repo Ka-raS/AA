@@ -1,1 +1,1 @@
-Giờ tôi sẽ chạy lệnh clear và bắt đầu session chat mới để tiếp tục làm bảng risk register (A_Project_Managers_Book_of_Forms-2.pdf trang 139–141 vật lý). Bạn xóa bỏ/giữ lại những nội dung không cần thiết/quan trọng vào BRIEF.md và cho cái files quan trọng (bỏ qua hết file không cần thiết) mà bạn đang không để ở trong thư mục AA/ này vào thư mục AA/ đi, để phiên claude opus 5.5 xhigh sau đạt hiệu quả tốt.
+hãy đọc BRIEF để tiếp tục phiên làm việc làm RISK REGISTER. Có những câu hỏi gì cần tôi trả lời để hoàn thiện thông tin cần có trước và trong khi làm thì hãy hỏi tôi
