@@ -1,5 +1,5 @@
 Attribute VB_Name = "SetupScheduleView"
-' Run once after opening Project_Schedule_v7.xml in Microsoft Project.
+' Run once after opening 4.xml in Microsoft Project.
 ' Rebuilds the Entry table of the Gantt Chart as:
 '   WBS | Task Name | Duration | Start | Finish | Predecessors (WBS) | Resource Names
 ' i.e. the ID column is removed and the WBS column (1.x, 1.x.x) is shown first.
