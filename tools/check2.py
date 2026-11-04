@@ -139,8 +139,16 @@ for k, a in rd.items():
         if wp not in wbs_ids: bad(f"{k} RTM deliverable {wp} not a WBS item")
 # leftover phrases
 alltext = "\n".join(p_text(p) for p in body.iter(q("p")))
-for pat in ["cost.docx", "resource.docx", "quality.docx", "Function List", "SRS Section", "one block", "Sponsor/instructor", "Prime Minister", "second National Day", " 4,400 ", "running stably", "strictly", "significantly", "Quickly", "relevant results", "minor changes", "full CRUD", "complete CRUD", "short lessons", "Page 1 of", "his own code"]:
+for pat in ["cost.docx", "resource.docx", "quality.docx", "Function List", "SRS Section", "one block", "Sponsor/instructor", "Prime Minister", "second National Day", " 4,400 ", "running stably", "strictly", "significantly", "Quickly", "relevant results", "minor changes", "full CRUD", "complete CRUD", "short lessons", "Page 1 of", "his own code",
+            "(SUM)", "Score (C =", "Hours (A)", "(B1:B4)", "below 2%", "under 2%", "or 3 days", "favourite", "without performance degradation",
+            "without degradation", "oldest supported", "open major", "if time allows", "reflect stated inputs", "in real time", "24 TB"]:
     if pat in alltext: bad(f"leftover phrase: {pat}")
+# Inter-RTM: technical requirements numbered TR-01.. in table order
+irtm = by_title("INTER-REQUIREMENTS TRACEABILITY MATRIX")
+if irtm:
+    trs = [row[4] for row in R(irtm[0]) if len(row) > 4 and re.fullmatch(r"TR-\d\d", row[4])]
+    if trs != [f"TR-{i:02d}" for i in range(1, len(trs) + 1)]: bad(f"Inter-RTM TR numbering {trs}")
+    print("Inter-RTM:", len(trs), "technical requirements")
 # Risk register: each "RISK REGISTER" table (ID..Response) is followed by its lower table (ID, Revised..Comments)
 up, low = {}, {}
 for t in by_title("RISK REGISTER"):
