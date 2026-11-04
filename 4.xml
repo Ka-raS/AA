@@ -354,7 +354,7 @@
         <Task>
             <UID>4</UID>
             <ID>3</ID>
-            <Name>Hold the kickoff and elicitation meetings with the Sponsor and Customer and develop the Project Charter</Name>
+            <Name>Hold elicitation meetings and write the Charter</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -394,7 +394,7 @@
         <Task>
             <UID>5</UID>
             <ID>4</ID>
-            <Name>Write the Software Requirements Specification (SRS)</Name>
+            <Name>Write the SRS</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -440,7 +440,7 @@
         <Task>
             <UID>6</UID>
             <ID>5</ID>
-            <Name>Build the Requirements Traceability Matrix (RTM) and acceptance criteria</Name>
+            <Name>Build the RTM and acceptance criteria</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -486,7 +486,7 @@
         <Task>
             <UID>7</UID>
             <ID>6</ID>
-            <Name>Write the Project Scope Statement, WBS and WBS Dictionary</Name>
+            <Name>Write the Scope Statement, WBS, WBS Dictionary</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -571,7 +571,7 @@
         <Task>
             <UID>9</UID>
             <ID>8</ID>
-            <Name>Review the SRS, RTM and scope baseline with the Customer and Sponsor</Name>
+            <Name>Review the SRS and RTM with Customer and Sponsor</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -639,7 +639,7 @@
         <Task>
             <UID>10</UID>
             <ID>9</ID>
-            <Name>Revise the SRS and RTM for Customer sign-off</Name>
+            <Name>Revise the SRS and RTM</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -685,7 +685,7 @@
         <Task>
             <UID>11</UID>
             <ID>10</ID>
-            <Name>SRS and RTM signed off by the Customer (milestone)</Name>
+            <Name>SRS and RTM signed off (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -768,7 +768,7 @@
         <Task>
             <UID>13</UID>
             <ID>12</ID>
-            <Name>Evaluate the technology stack and design the system architecture</Name>
+            <Name>Design the system architecture</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -814,7 +814,7 @@
         <Task>
             <UID>14</UID>
             <ID>13</ID>
-            <Name>Design the ER diagram and PostgreSQL schema</Name>
+            <Name>Design the database (ER diagram, schema)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -906,7 +906,7 @@
         <Task>
             <UID>16</UID>
             <ID>15</ID>
-            <Name>Design the high-fidelity mockups and clickable prototype</Name>
+            <Name>Design the mockups and prototype</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -959,7 +959,7 @@
         <Task>
             <UID>17</UID>
             <ID>16</ID>
-            <Name>Write the detailed design (modules, class and sequence diagrams)</Name>
+            <Name>Write the detailed design</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1012,7 +1012,7 @@
         <Task>
             <UID>18</UID>
             <ID>17</ID>
-            <Name>Define the general API specification (OpenAPI 3.0) shared by all developers</Name>
+            <Name>Define the general API specification</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1065,7 +1065,7 @@
         <Task>
             <UID>19</UID>
             <ID>18</ID>
-            <Name>Set up the repository, CI/CD pipeline, staging, backups and CDN</Name>
+            <Name>Set up the repository, CI/CD, staging and CDN</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1113,7 +1113,7 @@
         <Task>
             <UID>20</UID>
             <ID>19</ID>
-            <Name>Review the system design and mockups with the Customer</Name>
+            <Name>Review the design with the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1213,7 +1213,7 @@
         <Task>
             <UID>22</UID>
             <ID>21</ID>
-            <Name>Revise the system design and API specification</Name>
+            <Name>Revise the design and API specification</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1266,7 +1266,7 @@
         <Task>
             <UID>23</UID>
             <ID>22</ID>
-            <Name>System design approved by the Customer (milestone)</Name>
+            <Name>Design approved by the Customer (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1356,7 +1356,7 @@
         <Task>
             <UID>25</UID>
             <ID>24</ID>
-            <Name>Develop the authentication and user API with unit tests</Name>
+            <Name>Develop the authentication and user API</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1402,7 +1402,7 @@
         <Task>
             <UID>26</UID>
             <ID>25</ID>
-            <Name>Develop the music streaming API and CDN integration with unit tests</Name>
+            <Name>Develop the streaming API and CDN integration</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1455,7 +1455,7 @@
         <Task>
             <UID>27</UID>
             <ID>26</ID>
-            <Name>Develop the Live Premiere WebSocket service with unit tests</Name>
+            <Name>Develop the Live Premiere WebSocket service</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1501,7 +1501,7 @@
         <Task>
             <UID>28</UID>
             <ID>27</ID>
-            <Name>Build the playback and Live Premiere screens with unit tests</Name>
+            <Name>Build the playback and Live Premiere screens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1547,7 +1547,7 @@
         <Task>
             <UID>29</UID>
             <ID>28</ID>
-            <Name>Test the MVP functions (integration testing)</Name>
+            <Name>Test the MVP (integration testing)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1721,7 +1721,7 @@
         <Task>
             <UID>32</UID>
             <ID>31</ID>
-            <Name>MVP features completed internally (milestone)</Name>
+            <Name>MVP completed internally (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1803,7 +1803,7 @@
         <Task>
             <UID>34</UID>
             <ID>33</ID>
-            <Name>Develop search, playlist, library and recommendation APIs with unit tests</Name>
+            <Name>Develop the discovery and library APIs</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1849,7 +1849,7 @@
         <Task>
             <UID>35</UID>
             <ID>34</ID>
-            <Name>Develop favorites, comments, notification, admin and receipt-verification APIs with unit tests</Name>
+            <Name>Develop social, notification, admin and receipt APIs</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1895,7 +1895,7 @@
         <Task>
             <UID>36</UID>
             <ID>35</ID>
-            <Name>Build login, profile, search, recommendation, playlist, library and social screens with unit tests</Name>
+            <Name>Build account, discovery, library and social screens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1941,7 +1941,7 @@
         <Task>
             <UID>37</UID>
             <ID>36</ID>
-            <Name>Build offline download, video playback, in-app purchase and admin dashboard screens with unit tests</Name>
+            <Name>Build download, video, purchase and admin screens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1994,7 +1994,7 @@
         <Task>
             <UID>38</UID>
             <ID>37</ID>
-            <Name>Test the full feature set (integration testing)</Name>
+            <Name>Test all functions (integration testing)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2061,7 +2061,7 @@
         <Task>
             <UID>39</UID>
             <ID>38</ID>
-            <Name>Demo all functions to the Customer and Sponsor</Name>
+            <Name>Demo all functions to Customer and Sponsor</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2283,7 +2283,7 @@
         <Task>
             <UID>44</UID>
             <ID>43</ID>
-            <Name>Create the test case template and write the test cases from the RTM</Name>
+            <Name>Create the test case template and test cases</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2336,7 +2336,7 @@
         <Task>
             <UID>45</UID>
             <ID>44</ID>
-            <Name>Run load (9,000-15,000 users), security and device performance tests</Name>
+            <Name>Run load, security and device tests</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2383,7 +2383,7 @@
         <Task>
             <UID>46</UID>
             <ID>45</ID>
-            <Name>Fix the defects found in load, security and device testing</Name>
+            <Name>Fix load, security and device test defects</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2482,7 +2482,7 @@
         <Task>
             <UID>48</UID>
             <ID>47</ID>
-            <Name>Review the test summary report with the Customer</Name>
+            <Name>Review the test report with the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2529,7 +2529,7 @@
         <Task>
             <UID>49</UID>
             <ID>48</ID>
-            <Name>Fix the defects raised in the test review</Name>
+            <Name>Fix the test review defects</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2575,7 +2575,7 @@
         <Task>
             <UID>50</UID>
             <ID>49</ID>
-            <Name>Release candidate ready for Customer acceptance testing (milestone)</Name>
+            <Name>Release candidate ready for UAT (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2703,7 +2703,7 @@
         <Task>
             <UID>53</UID>
             <ID>52</ID>
-            <Name>Fix the defects reported by the Customer during UAT</Name>
+            <Name>Fix the defects reported in UAT</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2750,7 +2750,7 @@
         <Task>
             <UID>54</UID>
             <ID>53</ID>
-            <Name>Customer acceptance sign-off after UAT (milestone)</Name>
+            <Name>Customer acceptance sign-off (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2795,7 +2795,7 @@
         <Task>
             <UID>55</UID>
             <ID>54</ID>
-            <Name>Deploy to production with monitoring and backups</Name>
+            <Name>Deploy to production</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2887,7 +2887,7 @@
         <Task>
             <UID>57</UID>
             <ID>56</ID>
-            <Name>Submit the apps to the App Store and Google Play</Name>
+            <Name>Submit the apps to App Store and Google Play</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2981,7 +2981,7 @@
         <Task>
             <UID>59</UID>
             <ID>58</ID>
-            <Name>Write the user guide, admin guide and release notes (Vietnamese/English)</Name>
+            <Name>Write the user and admin guides, release notes</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3027,7 +3027,7 @@
         <Task>
             <UID>60</UID>
             <ID>59</ID>
-            <Name>Write the deployment and operations documentation</Name>
+            <Name>Write the deployment and operations guide</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3073,7 +3073,7 @@
         <Task>
             <UID>61</UID>
             <ID>60</ID>
-            <Name>Review the handover deliverables with the Customer</Name>
+            <Name>Review the handover with the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3173,7 +3173,7 @@
         <Task>
             <UID>63</UID>
             <ID>62</ID>
-            <Name>Apps published and deliverables handed over (milestone)</Name>
+            <Name>Apps published and handed over (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3277,7 +3277,7 @@
         <Task>
             <UID>65</UID>
             <ID>64</ID>
-            <Name>Develop the Project Management Plan (schedule, cost baseline, risk, quality, communications and procurement plans)</Name>
+            <Name>Develop the Project Management Plan</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3323,7 +3323,7 @@
         <Task>
             <UID>66</UID>
             <ID>65</ID>
-            <Name>Project Management Plan approved by the Sponsor (milestone)</Name>
+            <Name>Project Management Plan approved (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3368,7 +3368,7 @@
         <Task>
             <UID>67</UID>
             <ID>66</ID>
-            <Name>Procure the cloud, CDN, test devices and test tools</Name>
+            <Name>Procure cloud, CDN, devices and test tools</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3414,7 +3414,7 @@
         <Task>
             <UID>68</UID>
             <ID>67</ID>
-            <Name>Track progress and send status and cost reports to the Sponsor</Name>
+            <Name>Track progress and report status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
@@ -3453,7 +3453,7 @@
         <Task>
             <UID>74</UID>
             <ID>68</ID>
-            <Name>Track progress and send the Month 1 status and cost report</Name>
+            <Name>Report Month 1 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3501,7 +3501,7 @@
         <Task>
             <UID>75</UID>
             <ID>69</ID>
-            <Name>Track progress and send the Month 2 status and cost report</Name>
+            <Name>Report Month 2 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3556,7 +3556,7 @@
         <Task>
             <UID>76</UID>
             <ID>70</ID>
-            <Name>Track progress and send the Month 3 status and cost report</Name>
+            <Name>Report Month 3 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3604,7 +3604,7 @@
         <Task>
             <UID>77</UID>
             <ID>71</ID>
-            <Name>Track progress and send the Month 4 status and cost report</Name>
+            <Name>Report Month 4 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3652,7 +3652,7 @@
         <Task>
             <UID>78</UID>
             <ID>72</ID>
-            <Name>Track progress and send the Month 5 status and cost report</Name>
+            <Name>Report Month 5 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3739,7 +3739,7 @@
         <Task>
             <UID>79</UID>
             <ID>74</ID>
-            <Name>Review risks and change requests (review 1 of 8)</Name>
+            <Name>Review risks and changes (1 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3787,7 +3787,7 @@
         <Task>
             <UID>80</UID>
             <ID>75</ID>
-            <Name>Review risks and change requests (review 2 of 8)</Name>
+            <Name>Review risks and changes (2 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3835,7 +3835,7 @@
         <Task>
             <UID>81</UID>
             <ID>76</ID>
-            <Name>Review risks and change requests (review 3 of 8)</Name>
+            <Name>Review risks and changes (3 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3883,7 +3883,7 @@
         <Task>
             <UID>82</UID>
             <ID>77</ID>
-            <Name>Review risks and change requests (review 4 of 8)</Name>
+            <Name>Review risks and changes (4 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3931,7 +3931,7 @@
         <Task>
             <UID>83</UID>
             <ID>78</ID>
-            <Name>Review risks and change requests (review 5 of 8)</Name>
+            <Name>Review risks and changes (5 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -3979,7 +3979,7 @@
         <Task>
             <UID>84</UID>
             <ID>79</ID>
-            <Name>Review risks and change requests (review 6 of 8)</Name>
+            <Name>Review risks and changes (6 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -4027,7 +4027,7 @@
         <Task>
             <UID>85</UID>
             <ID>80</ID>
-            <Name>Review risks and change requests (review 7 of 8)</Name>
+            <Name>Review risks and changes (7 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -4075,7 +4075,7 @@
         <Task>
             <UID>86</UID>
             <ID>81</ID>
-            <Name>Review risks and change requests (review 8 of 8, final)</Name>
+            <Name>Review risks and changes (8 of 8, final)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -4123,7 +4123,7 @@
         <Task>
             <UID>70</UID>
             <ID>82</ID>
-            <Name>Collect lessons learned and write the final project report</Name>
+            <Name>Write the lessons learned and final report</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -4169,7 +4169,7 @@
         <Task>
             <UID>71</UID>
             <ID>83</ID>
-            <Name>Review the final project report with the Sponsor</Name>
+            <Name>Review the final report with the Sponsor</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -4269,7 +4269,7 @@
         <Task>
             <UID>73</UID>
             <ID>85</ID>
-            <Name>Project closed with Sponsor sign-off (milestone)</Name>
+            <Name>Project closed by the Sponsor (milestone)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>

@@ -13,7 +13,7 @@ Sub SetupScheduleView()
         LockFirstColumn:=False, DateFormat:=255, RowHeight:=1, AlignTitle:=1, _
         HeaderAutoRowHeightAdjustment:=False, WrapText:=False
     TableEditEx Name:="Entry", TaskTable:=True, NewFieldName:="Name", Title:="Task Name", _
-        Width:=60, Align:=0, LockFirstColumn:=False, DateFormat:=255, RowHeight:=1, AlignTitle:=1, _
+        Width:=50, Align:=0, LockFirstColumn:=False, DateFormat:=255, RowHeight:=1, AlignTitle:=1, _
         HeaderAutoRowHeightAdjustment:=False, WrapText:=False
     TableEditEx Name:="Entry", TaskTable:=True, NewFieldName:="Duration", Title:="Duration", _
         Width:=9, Align:=2, LockFirstColumn:=False, DateFormat:=255, RowHeight:=1, AlignTitle:=1, _
