@@ -1,2 +1,0 @@
-Task 1.7.4 "Track progress and send status and cost reports" chỉ chạy từ 13/10 đến 23/10, trong khi việc theo dõi tiến độ đáng lẽ kéo dài cả dự án. 1.7.5 (Monitor risks) cũng vậy: chỉ từ 13/11 đến 24/11.
-Phần Scope có ghi "in-app purchases via App Store / Google Play billing", và WBS có task 1.4.2 (receipt-verification) và 1.4.4 (in-app purchase). Nhưng trong Function List và RTM (FR-01 đến FR-13) không có yêu cầu nào về mua hàng, nên các task này không truy vết được về requirement nào.
