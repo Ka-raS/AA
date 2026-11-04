@@ -1,2 +1,1 @@
-Giờ tôi muốn bạn sửa file .xml (.mpp), và nội dung trong .docx của nó tương ứng, như sau:
-Task name đang bị dài quá, bạn cần rút gọn/bỏ những ý không cần thiết. Ví dụ là cụm từ "with unit tests"
+Giờ tôi sẽ chạy lệnh clear và bắt đầu session chat mới để tiếp tục làm bảng risk register (A_Project_Managers_Book_of_Forms-2.pdf trang 139–141 vật lý). Bạn xóa bỏ/giữ lại những nội dung không cần thiết/quan trọng vào BRIEF.md và cho cái files quan trọng (bỏ qua hết file không cần thiết) mà bạn đang không để ở trong thư mục AA/ này vào thư mục AA/ đi, để phiên claude opus 5.5 xhigh sau đạt hiệu quả tốt.
