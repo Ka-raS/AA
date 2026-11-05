@@ -1,0 +1,8 @@
+Tất cả các bảng:
+- trên cùng bên phải của bảng thường có Date Prepared, không viết "revised ..." vào đó
+
+Risk Registry
+- một số risk xảy ra sẽ cần phải sửa tài liệu bên trên, và sẽ cần nói rõ tài liệu nào thay đổi
+- rủi ro nhân sự về công việc, thắt cổ chai, chất lượng không tốt
+- các responses/actions có phải chuyển thành một work trong WORK BREAKDOWN STRUCTURE, có ý nghĩa là prevention, hay không? 
+- cho "Probability and Impact Scale (1-5) used in this register" lên đầu. và còn lại đổi thành 2 bảng duy nhất, 1 bảng các "Risk Statement, 1 bảng các "Actions".
