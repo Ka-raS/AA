@@ -1,6 +1,11 @@
 Tất cả các bảng:
 - trên cùng bên phải của bảng thường có Date Prepared, không viết "revised ..." vào đó
 
+Có nên làm như thế này không?
+    WSB, Schedule và các tài liệu liên quan:
+    - WBS bỏ các task "(milestone)"
+    - Schedule, .xml (.mpp) bỏ ID của task (milestone), vì bản chất của nó không phải là work
+
 Risk Registry
 - một số risk xảy ra sẽ cần phải sửa tài liệu bên trên, và sẽ cần nói rõ tài liệu nào thay đổi
 - rủi ro nhân sự về công việc, thắt cổ chai, chất lượng không tốt
