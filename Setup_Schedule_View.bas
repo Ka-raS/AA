@@ -4,28 +4,34 @@ Attribute VB_Name = "SetupScheduleView"
 '   WBS | Task Name | Duration | Start | Finish | Predecessors (WBS) | Resource Names
 ' i.e. the ID column is removed and the WBS column is shown first:
 '   1.x = phases, 1.x.x = work packages, 1.7.3.x / 1.7.4.x = recurring sessions,
-'   M = the "Milestones" group at the end of the schedule, M-01..M-09 = milestones (not part of the WBS).
+'   M-01..M-09 = milestones (not part of the WBS), in the last rows of the phase they belong to.
 ' Predecessors use the "WBS Predecessors" field so links read as WBS codes
 ' (the normal Predecessors field shows ID numbers, which are hidden now).
 Sub SetupScheduleView()
-    Dim t As Task, n As Integer
+    Dim t    Dim t As Task, n As Integer, i As Integer, names As Variant
 
-    ' Milestone codes: if Project regenerated them on import (for example 1.8.1 instead of M-01), restore them.
+    ' Milestone codes: if Project regenerated them on import (for example 1.1.8 instead of M-01), restore them
+    ' from the milestone names (M-01..M-09 in date order, as in 4.docx).
+    names = Array("SRS and RTM signed off", "Project Management Plan approved", "Design approved by the Customer", _
+                  "MVP completed internally", "All functions complete", "Release candidate ready for UAT", _
+                  "Customer acceptance sign-off", "Apps published and handed over", "Project closed by the Sponsor")
     On Error GoTo WbsFailed
     For Each t In ActiveProject.Tasks
         If Not t Is Nothing Then
-            If t.Summary And t.Name = "Milestones" Then
-                If t.WBS <> "M" Then t.WBS = "M"
-            ElseIf t.Milestone And t.OutlineParent.Name = "Milestones" Then
-                n = n + 1
-                If t.WBS <> "M-" & Format(n, "00") Then t.WBS = "M-" & Format(n, "00")
+            If t.Milestone Then
+                For i = 0 To 8
+                    If t.Name = names(i) Then
+                        n = n + 1
+                        If t.WBS <> "M-" & Format(i + 1, "00") Then t.WBS = "M-" & Format(i + 1, "00")
+                    End If
+                Next i
             End If
         End If
     Next t
     On Error GoTo 0
-    If n <> 9 Then MsgBox "Expected 9 milestones in the Milestones group, found " & n & ".", vbExclamation
+    If n <> 9 Then MsgBox "Expected 9 milestones, found " & n & ".", vbExclamation
 
-    ViewApply Name:="Gantt Chart"
+pply Name:="Gantt Chart"
 
     TableEditEx Name:="Entry", TaskTable:=True, Create:=True, OverwriteExisting:=True, _
         FieldName:="WBS", Title:="WBS", Width:=8, Align:=0, ShowInMenu:=True, _
