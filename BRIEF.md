@@ -134,3 +134,17 @@ Tìm bảng bằng chữ ở ô đầu tiên (ví dụ `"ACTIVITY COST ESTIMATES
 
 ## 8. Việc còn dở
 1. Nhúng `schedule.pdf` vào ô placeholder ở mục 3. Hỏi user muốn chèn dạng ảnh hay object; nếu thêm trang thì chạy lại `footers.py` + `pagecount.py`.
+
+## 9. Cập nhật ngày 18/11/2026 — ưu tiên hơn mô tả cấu trúc cũ
+- Đã đọc `note.txt` trên GitHub qua API chỉ đọc; trùng bản cục bộ. Không dùng Git để sửa/commit/push.
+- `4.docx` hiện 48 trang, 19 section: thêm **8. CREATE STAKEHOLDER REGISTER** (1 trang, 13 bản ghi, 6 cột đúng sách). Có bản riêng `Stakeholder_Register.docx` để nộp.
+- Mọi Date Prepared chỉ còn một ngày, lấy ngày mới nhất đã ghi trong nguồn; không còn chú thích revised trong trường này.
+- Cây WBS chỉ giữ **55 WP**, bỏ 9 dòng sự kiện milestone. `4.xml`, ID/UID/mã lịch, dependency và `schedule.pdf` giữ nguyên; không đánh lại mã để lấp khoảng trống.
+- Book of Forms 2.10 trang in 52–53 cho phép Dictionary tóm tắt cấp control account. Đã xác định 1.1–1.7 là phase control account và đổi nhãn **Control Account Name**; không gọi chúng là từng WP. Các bảng con vẫn giữ WP 1.x.y.
+- Dictionary và Resource Requirements đã gộp quy tắc/kỹ năng lặp thành ghi chú chung. Không được xóa ghi chú chung nếu không khôi phục các quy tắc tại nơi khác.
+- Risk Register hiện **R-01..R-14**, 5 trang: thang Probability/Impact ở đầu, 2 bảng dữ liệu liên tục (Risk Statements, Actions) có header lặp. R-13: nghẽn Technical Lead/review; R-14: kỹ năng không khớp/chất lượng công việc. Mỗi rủi ro ghi tài liệu cần cập nhật nếu trigger. Revised ratings là mục tiêu residual, không phải kết quả đo; tất cả Open tại mốc kế hoạch.
+- `tools/check2.py` nhận diện bảng rủi ro qua header, không còn phụ thuộc việc bảng trên/dưới xen kẽ. Trả mã lỗi 1 khi có PROBLEMS. `tools/pagecount.py` dùng pypdf, phù hợp Python bundled.
+- `4_Tieng_Viet.docx`: bản đọc chung rút gọn 26 trang, giữ mã/số liệu và nội dung các nhóm form; không phải bản sao định dạng từng form của bản tiếng Anh.
+- Chi tiết quyết định ở `GHI_CHU_CHINH_SUA.md`. Script tái tạo: `tools/revise_20261118.py`, `tools/vietnamese_20261118.py`; bản gốc ở `tmp/revision_20261118/4.original.docx`. Script chỉnh sửa dùng bản gốc có chủ đích; không chạy lại sau khi có thay đổi mới mà chưa đối chiếu.
+- User đã yêu cầu **để ôn vấn đáp/phân chia người phụ trách sang sau**. Chưa phân công và không ghi nhận ai đã hoàn thành phần việc ôn.
+- Chưa nhúng Gantt vào phần 3; công việc này vẫn như mục 8.

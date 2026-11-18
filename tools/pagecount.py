@@ -6,15 +6,15 @@ usage: python pagecount.py <in.docx> <in.pdf> <out.docx>
 import sys, os, re
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import pymupdf
+from pypdf import PdfReader
 from docx import Document
 from dlib import *
 
 SRC, PDF, DST = sys.argv[1], sys.argv[2], sys.argv[3]
 counts = []
-for page in pymupdf.open(PDF):
+for page in PdfReader(PDF).pages:
     m = None
-    for line in page.get_text().splitlines():
+    for line in page.extract_text().splitlines():
         mm = re.fullmatch(r"\s*Page (\d+) of (\d+)\s*", line)
         if mm: m = mm
     if m and m.group(1) == "1":

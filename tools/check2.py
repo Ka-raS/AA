@@ -149,15 +149,18 @@ if irtm:
     trs = [row[4] for row in R(irtm[0]) if len(row) > 4 and re.fullmatch(r"TR-\d\d", row[4])]
     if trs != [f"TR-{i:02d}" for i in range(1, len(trs) + 1)]: bad(f"Inter-RTM TR numbering {trs}")
     print("Inter-RTM:", len(trs), "technical requirements")
-# Risk register: each "RISK REGISTER" table (ID..Response) is followed by its lower table (ID, Revised..Comments)
+# Risk register: identify datasets by their column labels, supporting continuous
+# statement/action tables as well as the older paginated layout.
 up, low = {}, {}
-for t in by_title("RISK REGISTER"):
-    lt = t.getnext()
-    while lt is not None and lt.tag != q("tbl"): lt = lt.getnext()
-    for row in R(t):
-        if re.fullmatch(r"R-\d\d", row[0]): up[row[0]] = row
-    for row in R(lt):
-        if re.fullmatch(r"R-\d\d", row[0]): low[row[0]] = row
+for t in tbls:
+    rr = R(t)
+    header = " ".join(" ".join(row) for row in rr[:4] if row and not re.fullmatch(r"R-\d\d", row[0]))
+    target = up if "Risk Statement" in header and "Response" in header else low if "Revised Probability" in header and "Actions" in header else None
+    if target is None: continue
+    for row in rr:
+        if re.fullmatch(r"R-\d\d", row[0]):
+            if row[0] in target: bad(f"RiskReg duplicate {row[0]}")
+            target[row[0]] = row
 if up:
     if list(up) != list(low): bad("RiskReg: upper and lower IDs differ")
     if list(up) != [f"R-{i:02d}" for i in range(1, len(up) + 1)]: bad("RiskReg: IDs not consecutive")
@@ -176,3 +179,4 @@ if up:
         if m != rng_txt: bad(f"RiskReg: text says '{m}', register has {rng_txt}")
     print("Risk register:", len(up), "risks")
 print("PROBLEMS:", len(P))
+sys.exit(1 if P else 0)
