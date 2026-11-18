@@ -1,0 +1,37 @@
+Bạn tiếp quản việc sửa Gantt chart cho bài tập nhóm môn Software Project Management (nhóm 04, dự án "Development and Deployment of a Music Streaming Platform"). Máy này chạy Windows và có Microsoft Project.
+
+## Đọc trước
+- Đọc `BRIEF.md` trong thư mục dự án. Đó là bộ quy tắc bắt buộc: trả lời user bằng tiếng Việt, nội dung tài liệu viết tiếng Anh, KHÔNG dùng git, chưa rõ thì hỏi user bằng AskUserQuestion (tiếng Việt, có phương án đề xuất), mọi số liệu/ngày/mã phải khớp chéo, sau mỗi lần sửa chạy `python tools/check2.py 4.xml 4.docx` và phải ra `PROBLEMS: 0`. Sửa 4.docx mà động tới lịch thì phải sửa 4.xml cùng lúc, và ngược lại.
+- Cần Python có `lxml`, `python-docx`; đặt `PYTHONIOENCODING=utf-8`. `tools/mpxjread.py` cần Java + pip `mpxj`, `jpype1` (đường dẫn JAVA_HOME trong BRIEF là của máy khác, tự tìm lại).
+
+## Mục tiêu
+Xuất Gantt chart từ `4.xml` bằng MS Project thành một PDF đẹp, đúng thông lệ, để sau này chèn vào mục "3. CREATE PROJECT SCHEDULE" của 4.docx. Chưa chèn vào docx khi user chưa đồng ý; hỏi user muốn chèn dạng ảnh hay object.
+
+## Đã quyết định (dựa trên research: Tensix, Expertrain, GAO Schedule Assessment Guide GAO-16-89G, DCMA 14-point)
+1. Milestone KHÔNG thuộc WBS: cột WBS ghi mã M-01..M-09, không ghi mã 1.x.y.
+2. Milestone đặt ở DÒNG CUỐI của phase chứa nó, không gom thành nhóm "Milestones" ở cuối lịch như bản cũ `schedule(v2).pdf`. Lý do: bản cũ có thanh summary "84 days" gây hiểu nhầm, mũi tên phụ thuộc chạy dọc cả biểu đồ, và không nguồn nào khuyên gom xuống cuối. Gom lên ĐẦU lịch cũng không dùng, vì làm lệch OutlineNumber; OutlineNumber của work package phải trùng mã WBS.
+3. Phân bổ milestone: 1.1: M-01 · 1.2: M-03 · 1.3: M-04 · 1.4: M-05 · 1.5: M-06 · 1.6: M-07, M-08 · 1.7: M-02, M-09.
+4. Thêm liên kết M-04 → 1.4.5 và M-05 → 1.5.5 (trước đó hai mốc này không có task sau). Không ngày nào thay đổi.
+5. 17 liên kết có lag (FS+1..3 days) giữ nguyên. Lý do đã ghi trong Notes của task (thời gian chờ Customer/Sponsor đọc tài liệu).
+6. Định dạng bản in:
+   - bảng WBS | Task Name | Duration | Start | Finish | Predecessors (trường "WBS Predecessors") | Resource Names, không có cột ID;
+   - không cột nào bị cắt chữ: bản cũ bị cắt "1.7.3.", "/ed 10/14/26", predecessors dài; nên dùng định dạng ngày ngắn;
+   - tô đỏ critical path;
+   - tắt đường Current Date, vì đây là kế hoạch gốc;
+   - legend chỉ giữ Task / Critical / Milestone / Summary (kiểu thanh có tên bắt đầu bằng "*" sẽ bị ẩn khỏi legend);
+   - chỉ in Aug 17, 2026 – Jan 15, 2027, gọn trong 1 trang (bản cũ có trang 2 gần như trắng vì thang thời gian chạy tới 8/2027); khổ cũ là 34x22 in ngang;
+   - legend ghi tên dự án đầy đủ.
+
+## Hiện trạng file
+- `4.xml` ĐÃ được sửa theo các mục 1–4 (86 task, ID liên tiếp, milestone nằm cuối phase với OutlineNumber kế tiếp, ví dụ 1.1.8 có WBS M-01). check2 = 0. Chưa chạy được mpxjread. Kiểm tra lại bằng `python tools/mspdi.py 4.xml` và mpxjread trước khi làm tiếp.
+- `4.docx`: câu trong ô placeholder mục 3 đã sửa thành "Milestones (0 days) are shown as diamonds in the last rows of their phase, with codes M-01 to M-09 instead of WBS codes; critical tasks are shown in red;".
+- `Setup_Schedule_View.bas`: đã viết lại để làm hết mục 6 (đặt lại mã M-xx theo tên milestone vì MS Project có thể tự sinh lại mã WBS khi import XML, TableEditEx, GanttBarStyleCritical, GridlinesEdit pjGanttCurrentDate, GanttBarStyleEdit đổi tên "*...", FilePageSetupLegend/Page/View, rồi DocumentExport ra "schedule(v3).pdf" cạnh 4.xml). User chạy thì BÁO LỖI, nhưng chưa rõ lỗi gì. Việc đầu tiên: hỏi user thông báo lỗi và dòng code bị tô vàng.
+  Nghi vấn: hằng số hoặc tên tham số không hợp lệ với phiên bản Project (DateFormat:=pjDate_mmm_dd_yyy trong TableEditEx, GanttBarStyleCritical, PaperSize:=pjPaperDsheet không có trên máy in mặc định, vbCr trong Text của legend), ActiveProject.Path rỗng, hoặc file .bas bị import sai (file dùng CRLF).
+- Điều khiển MS Project qua COM từ WSL trên máy cũ bị lỗi 0x80080005. Trên máy này có thể thử PowerShell: nạp `Microsoft.Office.Interop.MSProject`, viết C# bằng `Add-Type` để gọi method có tham số theo tên (FileOpenEx với FormatID "MSProject.XML", rồi các lệnh như trong macro, DocumentExport). Nếu COM chạy được thì tự xuất PDF, render ra ảnh để tự kiểm tra bố cục. Nếu không thì sửa macro cho user chạy.
+- Lưu ý từ Microsoft Q&A: DocumentExport có thể tự nới cột Task Name làm bảng tràn sang trang khác. Cách tránh: dùng PercentScale thay cho PagesWide, hoặc in qua "Microsoft Print to PDF" bằng FilePrint FromDate/ToDate.
+
+## Khi xong
+- Xem PDF dưới dạng ảnh và tự kiểm tra từng điểm của mục 6.
+- Chạy check2 (phải ra 0) + mpxjread.
+- Cập nhật BRIEF.md (mục 2 và 8) cho khớp.
+- Báo user ngắn gọn bằng tiếng Việt, rồi hỏi về việc chèn PDF vào 4.docx và có cần cập nhật bản tiếng Việt 4_vi.docx không.
