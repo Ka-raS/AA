@@ -14,138 +14,80 @@
 | Trần Văn A | QA Engineer / DevOps Engineer | 124,261 | 448 | — |
 | Lê Quang Thu | UI/UX Designer / Flutter Developer | 198,818 | 456 | B23DCCE091 |
 
-- Dự án: "Development and Deployment of a Music Streaming Platform". Gồm Flutter (một codebase cho iOS/Android/Web), Node.js (Express.js), PostgreSQL, WebSocket cho Live Premiere, object storage + CDN.
+- Dự án: "Development and Deployment of a Music Streaming Platform": Flutter (một codebase cho iOS/Android/Web), Node.js (Express.js), PostgreSQL, WebSocket cho Live Premiere, object storage + CDN.
 - Giáo trình: `A_Project_Managers_Book_of_Forms-2.pdf` (mẫu biểu; trang vật lý = số trang in + 11) và `PMBOK-6-EN.pdf` (tham khảo).
+- Git: user làm trên nhánh `hieu` (nhánh `origin/feature/dainp` của Đại đã được so sánh và lấy phần tốt ngày 18/11/2026, không merge).
 
 ## 2. File trong AA/
-- `4.docx` — tài liệu **duy nhất**, 49 trang (bìa + 48), 20 section (bìa + 19 form). Cấu trúc ở mục 4.
-- `4_vi.docx` — bản tiếng Việt rút gọn của 4.docx để nhóm đọc (tạo 18/11/2026), cùng bố cục, đủ các form và bảng; **không phải bản nộp**, không chạy check2/colwidth trên file này. Khi 4.docx đổi nội dung thì hỏi user có cần cập nhật bản này không. **Cập nhật 18/11/2026** theo các sửa đổi cùng ngày của 4.docx (câu chữ khách quan, merge dainp, số trang lưu sẵn) bằng `tools/vi_update_20261118.py`; 49 trang, footer "Trang x / y".
-- `4.xml` — lịch Microsoft Project (MSPDI), **86 task**, ID liên tiếp. Milestone **không có mã WBS**: cột WBS ghi M-01..M-09 (đúng như trong 4.docx), mỗi milestone là **dòng cuối của phase chứa nó** (promt 18/11/2026; không còn nhóm "Milestones" ở cuối lịch): 1.1: M-01 · 1.2: M-03 · 1.3: M-04 · 1.4: M-05 · 1.5: M-06 · 1.6: M-07, M-08 · 1.7: M-02, M-09 (OutlineNumber 1.1.8, 1.2.11, 1.3.8, 1.4.8, 1.5.8, 1.6.11-12, 1.7.8-9). Ngày: M-01 SRS/RTM sign-off Sep 18, M-02 PMP approved Oct 1, M-03 design approved Oct 21, M-04 MVP Nov 20, M-05 all functions Dec 7, M-06 RC Dec 18, M-07 UAT sign-off Jan 4, M-08 apps handed over Jan 15, M-09 project closed Jan 15. Liên kết và ngày không đổi; summary 1.1 kết thúc Sep 18, 1.2 kết thúc Oct 21 vì chứa milestone. OutlineNumber của mọi work package trùng mã WBS.
-- `schedule(v3).pdf` — Gantt hiện hành (18/11/2026), xuất bằng `tools/export_gantt.py` (MS Project qua COM): 1 trang 34x22 in ngang, cùng bảng với macro, thang thời gian tháng/tuần; kiểu thanh, legend, gridline mặc định. `schedule.pdf`, `schedule(v2).pdf` là bản cũ (nhóm Milestones ở cuối). **Chưa nhúng** vào ô placeholder ở mục 3 của 4.docx.
-- `Setup_Schedule_View.bas` — macro MS Project dựng bảng WBS | Task Name | Duration | Start | Finish | WBS Predecessors | Resource Names. Phím F của user là phím âm lượng, nên chỉ hướng dẫn thao tác bằng menu (View → Macros…).
-- `promt.txt` — yêu cầu hiện tại của user. `tools/` — script hỗ trợ (mục 7).
+- `4.docx` — tài liệu nộp **duy nhất**, **77 trang** (bìa + mục lục + 75), 21 section (bìa, mục lục, 19 form). Cấu trúc ở mục 4. Bản 12 pt làm ngày 18/11/2026; bản 7–7.5 pt cũ còn trong git (commit trước đó).
+- `4.pdf` — bản PDF nộp kèm: Word xuất PDF, rồi trang Schedule (trang 40) được **đè bản vector của `schedule.pdf`** lên đúng khung ảnh Gantt (pymupdf `show_pdf_page`) để phóng to vẫn nét. Mỗi khi sửa 4.docx thì xuất lại 4.pdf theo cách này.
+- `4_vi.docx` — bản tiếng Việt để nhóm đọc, cùng bố cục (dòng nào khớp dòng nấy với 4.docx), **không phải bản nộp**, không chạy check2/colwidth trên file này. Footer "Trang x / y". Khi 4.docx đổi nội dung thì hỏi user có cần cập nhật bản này không. Đã đồng bộ với 4.docx ngày 18/11/2026.
+- `4.xml` — lịch Microsoft Project (MSPDI), **86 task**, ID liên tiếp. Milestone **không có mã WBS**: trường WBS ghi **M-01..M-09** (đúng như trong 4.docx), không có nhóm "Milestones". Mỗi milestone nằm **ngay sau work package dẫn tới nó** (thứ tự giống lịch cũ, user chốt 18/11/2026): M-01 sau 1.1.7, M-03 sau 1.2.10, M-04 sau 1.3.7, M-05 sau 1.4.7, M-06 sau 1.5.7, **M-07 sau 1.6.2** và **M-02 sau 1.7.1** (hai cái này xen giữa phase), M-08 sau 1.6.10, M-09 sau 1.7.7. OutlineNumber của work package trùng mã WBS, **trừ các gói sau M-07 trong 1.6 và sau M-02 trong 1.7** (lệch 1, ví dụ 1.6.3 có OutlineNumber 1.6.4); bảng in dùng trường WBS nên vẫn đúng.
+- `schedule.pdf` — Gantt hiện hành, xuất từ 4.xml: **1 trang 34 x 22 in ngang** (ANSI D); bảng WBS | Task Name | Duration | Start | Finish | Predecessors (trường WBS Predecessors) | Resource Names, không cột ID; thang thời gian tháng/tuần; kiểu thanh, legend, gridline mặc định; ngày dạng "Mon 8/17/26". Đã nhúng vào 4.docx dạng ảnh PNG 200 dpi rộng 6.8 in, **trang dọc** (user yêu cầu giữ dọc); trong 4.pdf ảnh được thay bằng bản vector.
+- `Setup_Schedule_View.bas` — macro MS Project dựng đúng bố cục của `schedule.pdf` (độ rộng cột 9/60/10/15/15/62/15, đặt lại mã M-01..M-09 theo tên milestone, thang tháng/tuần, 1 trang 34x22). User mở 4.xml → View → Macros… → SetupScheduleView → Run, rồi File → Export → PDF. File phải giữ **CRLF**. Phím F của user là phím âm lượng: chỉ hướng dẫn thao tác bằng menu.
+- Thư mục `tools/` **đã bị user xoá** (commit 78bf038). Script cũ lấy lại để chạy ở **scratchpad** (không tạo lại `tools/` trong AA/): `git show 78bf038~1:tools/<tên file> > <scratchpad>/tools/<tên file>`.
 
 ## 3. Quy tắc bắt buộc
-- **Không dùng git** dưới mọi hình thức (user cấm từ 04/11/2026).
-- Gặp điểm chưa rõ thì **hỏi user trước** (dùng AskUserQuestion, câu hỏi bằng tiếng Việt, đưa lựa chọn và ghi rõ phương án đề xuất).
-- Chỉ làm phần được yêu cầu, không thêm biểu mẫu mới ngoài yêu cầu. Nội dung lấy từ dữ liệu đã có trong tài liệu và phải nhất quán với nó.
-- Góp ý của giảng viên phải tuân theo:
-  - không dùng tính từ mơ hồ (stable, quickly, relevant, minor, major, "in real time", "without degradation"…) → viết tiêu chí đo được;
-  - (user yêu cầu 18/11/2026) mọi form **ngoài Project Charter** viết cho kỹ sư trong nhóm đọc: khách quan, kỹ thuật, không tâng bốc. Thay "large/small changes" bằng ngưỡng 2% / 3 ngày, "as capacity allows" / "if the schedule slips" bằng ngưỡng của R-03 (trễ > 3 ngày → change request), "main/critical" bằng mã và điểm (R-02 score 16, S1). Mức S1–S4 có định nghĩa trong QMP. Script: `tools/objective_20261118.py`;
-  - tên task/WBS bắt đầu bằng động từ, ngắn gọn (tối đa khoảng 52 ký tự);
+- **Git: chỉ đọc** (`git log/show/diff/status`). Không dùng lệnh cập nhật (commit, merge, checkout, pull, push, reset…) — user tự commit.
+- Gặp điểm chưa rõ thì **hỏi user trước** (AskUserQuestion, tiếng Việt, có phương án đề xuất).
+- Chỉ làm phần được yêu cầu; không thêm biểu mẫu mới. Nội dung lấy từ dữ liệu đã có và phải nhất quán với nó. **Không đụng Project Charter** khi sửa các form khác.
+- Cách viết (góp ý giảng viên + user 18/11/2026):
+  - mọi form ngoài Charter viết cho kỹ sư trong nhóm: **khách quan, kỹ thuật, đo được, không tâng bốc**. Không dùng tính từ mơ hồ (stable, quickly, relevant, minor, major, main, large/small, "in real time", "as capacity allows", "if the schedule slips", "without degradation"…) → thay bằng ngưỡng/mã cụ thể (2% ngân sách / 3 ngày; R-03: gói trễ > 3 ngày → change request; R-02 score 16; S1–S4 định nghĩa trong QMP);
+  - tên task/WBS bắt đầu bằng động từ, ngắn gọn (≤ khoảng 52 ký tự);
   - unit test do developer viết, nằm trong work package phát triển;
-  - UAT do Customer làm, nằm ngoài scope; vì vậy mọi yêu cầu Must/Should phải có thêm một phép kiểm do nhóm làm (Functional test, Design review…), không chỉ "UAT".
-- **Tiêu đề cột ghi đúng như sách** (user chọn 04/11/2026, áp dụng cho mọi bảng): không dùng ký hiệu kiểu `Hours (A)`, `Total (C = A x B)`, `(SUM)`, `Score (C = A x MAX(B1:B4))`. Công thức ghi trong **chú thích dưới bảng** (ACE, Cost Estimating Worksheet, Bottom-up, Risk Register) hoặc một dòng chú thích in nghiêng ngay dưới bảng chi phí (WBS Dictionary). Vẫn giữ đúng các cột của form trong giáo trình.
-- Mọi con số, ngày, ID phải khớp chéo giữa các bảng và với 4.xml. Sau mỗi lần sửa phải chạy `tools/check2.py` và kết quả phải là `PROBLEMS: 0`.
-- **Đồng bộ 4.xml cùng lúc với tài liệu** (user yêu cầu 18/11/2026): sửa 4.docx mà động tới lịch (mã WBS, tên task, ngày, người phụ trách, giờ, mã được nhắc trong Notes) thì sửa luôn 4.xml (`<WBS>`, `<OutlineNumber>`, `<Name>`, `<Notes>`…), chạy `check2.py` + `mpxjread.py`, rồi nhắc user mở 4.xml bằng MS Project để xuất lại schedule.pdf.
-- Định dạng:
-  - font **Arial**; title bar nền tối, chữ trắng đậm 16 pt; dòng Project Title / Date Prepared **8 pt** (w:sz 16) ở mọi form; nội dung bảng 7–7.5 pt (w:sz 14–15), header tối thiểu 7 pt; cây WBS/RBS giữ 9 pt;
-  - độ rộng cột: sau khi sửa nội dung chạy `tools/colwidth.py` (cột chữ dài được rộng, cột 1 ký tự hẹp; không để số hay từ ngắn bị gãy; tên người tối đa 2 dòng);
-  - mỗi biểu mẫu là **một section**, footer căn giữa `Page {PAGE} of {SECTIONPAGES}`, đánh số trang lại từ 1 (`tools/footers.py`), sau đó ghi số trang thật vào giá trị lưu sẵn của trường (`tools/pagecount.py`) để trình xem không cập nhật trường vẫn hiện đúng "of N";
-  - tiêu đề nhóm dạng `N. CREATE ...` (Arial đậm 13 pt, outline level 1) — dùng `dlib.heading_par`;
-  - đoạn ngắt section sau bảng cuối của form cao 1 pt, không có đoạn trống thừa trước nó (tránh trang trắng).
-- Bìa (trang 1, user yêu cầu 05/11/2026): font **Times New Roman** (ngoại lệ duy nhất so với quy tắc font Arial), gồm POSTS AND TELECOMMUNICATIONS INSTITUTE OF TECHNOLOGY / FACULTY OF INFORMATION TECHNOLOGY 1 / logo PTIT / ASSIGNMENT REPORT / tên dự án / COURSE: Software Project Management / bảng Class E23CNPM02, Group 04, Students (4 người + mã SV), Instructor / Hanoi – 2026. Khung viền và logo PTIT là hai ảnh trong 4.docx (rId26/rId27). Không đổi bìa trừ khi user yêu cầu. Bìa không có footer.
-- Sửa docx bằng python-docx + lxml (`tools/dlib.py`). Word chỉ dùng qua COM để xuất PDF kiểm tra bố cục, và **chỉ khi user yêu cầu** (18/11/2026 user nói không cần xuất PDF). **Không kill WINWORD** (bị chặn); `topdf.ps1` tự đóng Word.
+  - UAT do Customer làm, ngoài scope → mọi yêu cầu Must/Should có thêm một phép kiểm do nhóm làm (Functional test, Design review…).
+- **Tiêu đề cột ghi đúng như sách**: không dùng `Hours (A)`, `Total (C = A x B)`, `(SUM)`…; công thức ghi ở chú thích dưới bảng. Giữ đúng các cột của form.
+- Mọi con số, ngày, ID khớp chéo giữa các bảng và với 4.xml. Sau mỗi lần sửa chạy `check2.py 4.xml 4.docx` → phải `PROBLEMS: 0`.
+- **Đồng bộ 4.xml, 4.docx (và 4_vi.docx, macro) cùng lúc**: sửa gì động tới lịch (mã, tên task, ngày, người, giờ, Notes) thì sửa cả hai phía, chạy `check2.py` + `mpxjread.py`, xuất lại `schedule.pdf`.
+- Ô Date Prepared chỉ ghi **một ngày** (không "revised", không chú thích). Charter: August 27, 2026; form PMP (QMP, Team Charter, Assumption Log, Schedule…): September 29, 2026; form có số cost baseline: October 8, 2026.
+- Định dạng docx:
+  - (user yêu cầu 18/11/2026) font **Arial**, **mọi chữ 12 pt** (bảng, cây WBS/RBS, Project Title/Date Prepared, chú thích, footer); **tiêu đề 13 pt**: title bar (nền tối, chữ trắng đậm), tiêu đề nhóm, "Basis of Estimates and References"; mọi trang **dọc** Letter. Nội dung dài thì **tóm tắt/cắt bớt** (không giảm cỡ chữ), giữ đủ dòng, ID, số liệu; mục tiêu tổng 70–80 trang;
+  - bảng không vừa 12 pt thì **tách thành 2–3 bảng liên tiếp** giữ thứ tự cột của form, lặp cột ID (Assumption Log, Stakeholder Register, Requirements Documentation, RTM, Inter-RTM (TR nhóm theo dòng BO-n), ACE, Risk Register 3 bảng: ID..Score | ID, Response, Revised..Responsible Party | ID, Actions, Status, Comments); cột số hẹp dùng **tiêu đề dọc** (btLr) — vẫn đúng tên cột như sách; dòng tiêu đề đủ cao cho chữ dọc;
+  - **ACE, Bottom-up, WBS Dictionary ghi tiền theo nghìn VND** (làm tròn; Rate vẫn VND/giờ; tổng tính từ số chưa làm tròn; ghi ở chú thích); các form khác vẫn VND đầy đủ. WBS Dictionary/ACE dùng tên ngắn (Minh, Đại, Hiếu, A, Thu); Resource Requirements cột Resource chỉ ghi họ tên, vai trò + kỹ năng ghi một lần ở dòng "Team resources (people)", cột Assumptions chỉ còn "Available …";
+  - sửa nội dung bảng xong chạy bản colwidth cho 12 pt (mọi từ/số ≤ 200 pt không bị gãy, báo `NOT FITTING: 0`; tên người ≤ 2 dòng); Team Charter không chạy colwidth;
+  - **mục lục** (section riêng sau bìa): trường TOC `\o "1-2" \u`, cấp 1 = tiêu đề nhóm đánh số La Mã **I. … VII.** (không dùng "I.1"), cấp 2 = tên form (title bar đầu tiên của form, outline level 2), **không đánh số form**; cập nhật trường bằng Word trước khi lưu;
+  - mỗi form vẫn là một section, nhưng footer `Page {PAGE} of {NUMPAGES}` **đánh số liên tục** (bìa tính là trang 1, không hiện số); giá trị lưu sẵn của NUMPAGES = tổng số trang;
+  - dòng tiêu đề bảng lặp lại khi sang trang và giữ liền dòng sau (keep with next), không để dòng tiêu đề lẻ cuối trang; bỏ title bar lặp giữa trang (Charter, Scope Statement, WBS Dictionary) và các ngắt trang ép buộc giữa các phần của một form.
+- Bìa: font **Times New Roman**, tiêu đề 13 pt (ASSIGNMENT REPORT, tên dự án), dòng khác 12 pt; POSTS AND TELECOMMUNICATIONS INSTITUTE OF TECHNOLOGY / FACULTY OF INFORMATION TECHNOLOGY 1 / logo PTIT / ASSIGNMENT REPORT / tên dự án / COURSE: Software Project Management / bảng Class E23CNPM02, Group 04, Students (4 người + mã SV), Instructor / Hanoi – 2026; khung và logo là ảnh rId26/rId27; không có footer; không đổi trừ khi user yêu cầu.
+- Sửa docx bằng python-docx + lxml (`dlib.py`), làm trên bản sao ở scratchpad rồi mới chép vào AA/ (giữ bản cũ ở scratchpad).
 
-## 4. Cấu trúc 4.docx (trong ngoặc là số trang)
-Thứ tự form theo số thứ tự trong Book of Forms (user chốt 18/11/2026): 1.1 Charter → 1.2 Assumption Log → 1.3 Stakeholder Register → 1.4 Stakeholder Analysis → 2.6 Requirements Documentation → 2.7 RTM → 2.8 Scope Statement → 2.9 WBS → 2.10 WBS Dictionary → 2.18 Schedule → 2.20/2.21 chi phí → 2.23 QMP → 2.27 Team Charter → 2.28 Resource Requirements → 2.29 RBS → 2.32 Risk Register → bảng thang Probability and Impact (2.34/2.35) ở cuối section Risk Register. Dời form thì dời nguyên khối section (footer riêng đi theo, giữ số trang lưu sẵn).
-- Cover (1): không có footer.
-- **1. CREATE PROJECT CHARTER**
-  - Project Charter (4) — Date Prepared August 27, 2026; 757,000,000 VND là **pre-approved budget** (ước tính sơ bộ lúc khởi tạo, các khoản ghi "about ...", cộng đúng 757,000,000), Charter không nhắc "cost baseline". Approvals có tên Sponsor Nguyễn Trung B.
-  - Assumption Log A-01..A-14 (1)
-  - Stakeholder Register (1) và Stakeholder Analysis (1) — Book of Forms 1.3/1.4, Date Prepared August 27, 2026; 12 stakeholder (Customer, Sponsor, 5 thành viên, Customer administrators, end users, App Store/Google Play, cloud/CDN provider, Ministry of Public Security); email giả định dạng PTIT; Interest/Influence thang 1–5, Attitude Supportive/Neutral/Resistant; Classification = Internal/External + mức (Manage closely / Keep satisfied / Keep informed / Monitor) suy từ điểm.
-  - Requirements Documentation FR-01..FR-14, NFR-01..NFR-12 (2) — Date Prepared September 17, 2026
-- **2. CREATE WBS**
-  - Requirements Traceability Matrix + Inter-RTM BO-1..BO-6 / **TR-01..TR-18** (3)
-  - Project Scope Statement (2) — Date Prepared October 8, 2026
-  - Work Breakdown Structure (2) — chỉ có phase và work package; milestone không nằm trong WBS (chú thích dưới cây nói rõ)
-  - WBS Dictionary 1.1–1.7 + Resource Summary (8) — Date Prepared October 8, 2026; ở mức control account (chú thích dưới cây WBS nói rõ)
-- **3. CREATE PROJECT SCHEDULE**
-  - Ô placeholder "[Insert here the Gantt chart exported from 4.xml.]" (1)
-- **4. CREATE COST ESTIMATION**
-  - Activity Cost Estimates (5) — trang 5 chỉ có 3 dòng tổng, do các cột số phải đủ rộng để không gãy số
-  - Cost Estimating Worksheet (1)
-  - Bottom-up Cost Estimating Worksheet (2)
-  - Basis of Estimates and References (2)
-- **5. CREATE QUALITY MANAGEMENT PLAN**
-  - QMP: ISO/IEC 25010, 12 quality objectives (3 từ 18/11/2026, sau khi thêm định nghĩa S2-S4 — trước đó 2)
-- **6. RESOURCE MANAGEMENT**
-  - Team Charter (2) — cột chữ ký giữ 50/50, không chạy colwidth
-  - Resource Requirements: người + PR-01..PR-12 (3, từ 18/11/2026) — Date Prepared October 8, 2026 (RBS cũng vậy). "one task at a time" và kỹ năng theo vai trò chỉ ghi **một lần** ở dòng "Team resources (people)", không lặp ở từng dòng (lấy từ nhánh dainp 18/11/2026). WBS Dictionary: ô Assumptions and Constraints trỏ tới Responsibility Rule ở Resource Summary thay vì lặp lại quy tắc.
-  - Resource Breakdown Structure (1)
-- **7. CREATE RISK REGISTER** (4) — khổ dọc: bảng tiêu đề (RISK REGISTER + Project Title/Date) → đoạn 1 pt (keepNext) → bảng Risk Statement (ID..Response, R-01..R-14) + chú thích Score → bảng Actions (ID, Revised Probability..Comments) + chú thích Revised Score → bảng "Probability and Impact Scale (1-5)" (theo thứ tự sách, user chốt 18/11/2026; giữ trọn một trang). Hai bảng rủi ro lặp dòng tiêu đề mỗi trang, dòng không bị tách.
-  - R-01..R-14 (R-13 thắt cổ chai, Owner Minh; R-14 chất lượng sản phẩm thành viên, Owner A), thang 1–5, Score = Probability x Impact cao nhất trong 4 loại. Date Prepared October 8, 2026. Response ghi mã WP chứa hành động phòng ngừa "(in 1.x.y)"; Comments kết thúc bằng "If it occurs: change request (1.7.4); update <tài liệu>". Tất cả Open. Cao nhất là R-02 WebSocket (16).
+## 4. Cấu trúc 4.docx
+Số trang bản 12 pt (Word 18/11/2026): bìa 1, mục lục 1, Charter 7, Assumption Log 2, Stakeholder Register 3, Stakeholder Analysis 1, Requirements Documentation 4, RTM 4, Inter-RTM 2, Scope Statement 3, WBS 2, WBS Dictionary + Resource Summary 9, Schedule 1, ACE 7, Cost Estimating Worksheet 2, Bottom-up 3, Basis 3, QMP 5, Team Charter 2, Resource Requirements 6, RBS 1, Risk Register 8 = 77. Các số trong ngoặc ở dưới là của bản 7 pt cũ.
+Thứ tự theo Book of Forms: 1.1 Charter → 1.2 Assumption Log → 1.3 Stakeholder Register → 1.4 Stakeholder Analysis → 2.6 Requirements Documentation → 2.7 RTM → 2.8 Scope Statement → 2.9 WBS → 2.10 WBS Dictionary → 2.18 Schedule → 2.20/2.21 chi phí → 2.23 QMP → 2.27 Team Charter → 2.28 Resource Requirements → 2.29 RBS → 2.32 Risk Register (thang Probability/Impact ở cuối). Dời form thì dời nguyên section.
+- Cover (1)
+- **1. CREATE PROJECT CHARTER**: Project Charter (4) — 757,000,000 VND là pre-approved budget (các khoản "about ...", cộng đúng 757,000,000), không nhắc "cost baseline"; Assumption Log A-01..A-14 (1); Stakeholder Register (1) + Stakeholder Analysis (1) — 12 stakeholder, email giả định dạng PTIT (user chọn), Interest/Influence 1–5, Attitude Supportive/Neutral/Resistant, Classification = Internal/External + mức suy từ điểm (check2 kiểm tra); Requirements Documentation FR-01..FR-14, NFR-01..NFR-12 (2).
+- **2. CREATE WBS**: RTM + Inter-RTM BO-1..BO-6 / TR-01..TR-18 (3); Scope Statement (2); WBS (2) — chỉ phase + 55 work package, milestone không thuộc WBS; WBS Dictionary 1.1–1.7 mức control account + Resource Summary (8) — ô Assumptions and Constraints trỏ tới Responsibility Rule ở Resource Summary.
+- **3. CREATE PROJECT SCHEDULE** (1): ảnh Gantt (từ `schedule.pdf`) + câu mô tả cột và vị trí milestone (ngay sau work package dẫn tới nó, mã M-01..M-09).
+- **4. CREATE COST ESTIMATION**: Activity Cost Estimates (5); Cost Estimating Worksheet (1); Bottom-up (2); Basis of Estimates and References (2).
+- **5. QMP** (3): ISO/IEC 25010, 12 quality objectives; định nghĩa S1–S4 và thời hạn sửa (S1 1 ngày, S2 3 ngày, S3 trước M-06, S4 gói sửa lỗi sau / warranty).
+- **6. RESOURCE MANAGEMENT**: Team Charter (2, cột chữ ký 50/50); Resource Requirements (3) — người + PR-01..PR-12, "one task at a time" và kỹ năng theo vai trò ghi **một lần** ở dòng "Team resources (people)"; RBS (1).
+- **7. CREATE RISK REGISTER** (4): bảng tiêu đề → bảng Risk Statement (R-01..R-14) + chú thích Score → bảng Actions + chú thích Revised Score → bảng "Probability and Impact Scale (1-5)". Hai bảng rủi ro lặp header, dòng không bị tách. Response ghi WP chứa hành động phòng ngừa "(in 1.x.y)"; Comments kết thúc "If it occurs: change request (1.7.4); update <tài liệu>". Tất cả Open; cao nhất R-02 WebSocket (16); R-13 thắt cổ chai (Owner Minh), R-14 chất lượng công việc (Owner A).
 
 Tìm bảng bằng chữ ở ô đầu tiên (ví dụ `"ACTIVITY COST ESTIMATES"`), không dùng chỉ số.
 
 ## 5. Dữ liệu gốc (không được lệch)
-- **Thời gian:**
-  - Aug 17, 2026 – Jan 15, 2027 = 108 ngày làm việc (T2–T6, 8–12h và 13–17h).
-  - Nghỉ Sep 1–2 (Quốc khánh, doanh nghiệp chọn 1–2/9) và Jan 1. Làm bù thứ Bảy Sep 5.
-  - Tháng dự án: M1 Aug 17–Sep 16, M2 Sep 17–Oct 16, M3 Oct 17–Nov 16, M4 Nov 17–Dec 16, M5 Dec 17–Jan 15.
-- **Quy tắc nguồn lực:** mỗi work package có đúng 1 người phụ trách; mỗi người làm 1 việc một lúc (không trùng lịch); mỗi WP 8–80 h; mỗi người tối đa 176 h/tháng.
-  - Giờ theo tháng: Minh 152/152/40/64/104; Đại 72/128/160/96/48; Hiếu 64/160/168/48/104; A 88/96/80/88/96; Thu 120/104/144/56/32.
-  - Cả nhóm: 496/640/592/352/384 = 2,464 h (trên tổng 4,320 h khả dụng).
-- **Chi phí (VND):**
-  - Labor 406,794,048.
-  - Vật tư 104,400,000: 1.2.7 cloud/CDN 3 tháng × 18,500,000 = 55,500,000; 1.5.3 thiết bị test 28,000,000 + k6 17,600,000; 1.6.5 phí store 3,300,000.
-    - Bottom-up worksheet xếp cột: **Supplies** = k6 + phí store (20,900,000); **Equipment** = 4 thiết bị (28,000,000); **Other Direct Costs** = hóa đơn cloud 1.2.7 (55,500,000, gồm PR-01..PR-04). Khớp với RBS / Resource Requirements.
-  - Contingency reserve 137,904,988 = Σ(P − M) của từng WP. M = most likely; O = M − 10%; P = M + overrun % theo phase: 1.1 15%, 1.2 20%, 1.3 40%, 1.4 40%, 1.5 35%, 1.6 30%, 1.7 15%.
-    - Contingency theo phase: 1.1 8,429,891; 1.2 26,802,470; 1.3 24,184,535; 1.4 24,999,699; 1.5 27,811,401; 1.6 15,785,776; 1.7 9,891,216.
-    - Contingency 1.2.7 = 12,292,906 ≈ 22 TB CDN ở 550 VND/GB đã gồm VAT (PR-04, R-07).
-  - Work package estimates 649,099,036. Warranty (ngoài WBS) 71,822,880 = Hiếu 240 h + A 240 h.
-  - Cost baseline 720,921,916. Management reserve 5% = 36,046,096 (cho unknown risks, chỉ Sponsor được giải ngân). Budget 757,000,000.
-  - **Quyền PM:** tự duyệt thay đổi tốn **tối đa 2% ngân sách (15,140,000) VÀ tối đa 3 ngày lịch**; vượt một trong hai thì trình Sponsor. Viết thống nhất "up to 2% … and up to 3 days" (Charter, Scope Statement, QMP, Team Charter, WBS Dictionary 1.7, R-04, thang rủi ro).
-- **Chất lượng:** tại release candidate (M-06) **không còn lỗi S1 (critical) hoặc S2 (high)** — Charter, Scope Statement, QMP objective 8, WBS Dictionary 1.5 ghi giống nhau. NFR-01: tới 15,000 user với error rate < 1% (và p90 < 200 ms ở NFR-02).
-- **Yêu cầu:** FR-02 gồm cả **xóa tài khoản và dữ liệu cá nhân** (App Store bắt buộc; R-05, R-09 dẫn tới FR-02). FR-08 và FR-09 có tiêu chí đo được (50 lượt nghe gần nhất; lệch ≤ 2 s, chat ≤ 1 s, 15,000 user). FR-01, FR-08, NFR-12: "Functional test + UAT"; NFR-06: "Design review + UAT".
-- **Milestone:** M-01 Sep 18 · M-02 Oct 1 (PMP được duyệt) · M-03 Oct 21 · 1.3.6 MVP demo Nov 12 · M-04 Nov 20 · 1.4.6 demo Nov 30 · M-05 Dec 7 · 1.5.6 Dec 14 · M-06 RC Dec 18 · M-07 UAT sign-off Jan 4 · M-08 và M-09 Jan 15. Charter: mỗi milestone đạt không trễ quá 14 ngày so với baseline.
-- **Công việc quản lý dự án:**
-  - 1.7.1 PMP (Sep 16–29) gồm cả kế hoạch rủi ro; các form PMP (QMP, Team Charter, Assumption Log…) đề **Date Prepared: September 29, 2026**. Ô Date Prepared chỉ ghi **một ngày**, không ghi "revised" hay chú thích (user chốt 18/11/2026; check2 kiểm tra); form có số của cost baseline ghi October 8, 2026; "All amounts are in VND" nằm trong chú thích dưới bảng chi phí.
-  - 1.7.3: 5 báo cáo cuối tháng vào Sep 11; Oct 15–16; Nov 13 và 16; Dec 10–11; Jan 14–15.
-  - 1.7.4 "Monitor risks and manage change requests" (Minh, 64 h): 8 buổi review rủi ro vào Oct 14, Oct 28, Nov 11, Nov 25, Dec 9, Dec 23, Jan 5, Jan 13 (buổi cuối).
-  - 1.3.5 (A, Nov 5–11, 40 h) gồm cả 3 kiểm tra sớm của Risk Register: k6 1,000 kết nối WebSocket trên staging (R-02), quét OWASP ZAP baseline (R-08), đo khởi động trên Galaxy A07 / iPhone 11 (R-11); dùng công cụ miễn phí, không đổi giờ/chi phí.
+- **Thời gian:** Aug 17, 2026 – Jan 15, 2027 = 108 ngày làm việc (T2–T6, 8–12h, 13–17h). Nghỉ Sep 1–2 và Jan 1; làm bù thứ Bảy Sep 5. Tháng dự án: M1 Aug 17–Sep 16, M2 Sep 17–Oct 16, M3 Oct 17–Nov 16, M4 Nov 17–Dec 16, M5 Dec 17–Jan 15.
+- **Nguồn lực:** mỗi WP đúng 1 người; mỗi người 1 việc một lúc; WP 8–80 h; ≤ 176 h/người/tháng. Giờ theo tháng: Minh 152/152/40/64/104; Đại 72/128/160/96/48; Hiếu 64/160/168/48/104; A 88/96/80/88/96; Thu 120/104/144/56/32; cả nhóm 496/640/592/352/384 = 2,464 h (trên 4,320 h khả dụng).
+- **Chi phí (VND):** labor 406,794,048; vật tư 104,400,000 (1.2.7 cloud/CDN 3 × 18,500,000 = 55,500,000; 1.5.3 thiết bị 28,000,000 + k6 17,600,000; 1.6.5 phí store 3,300,000). Bottom-up: Supplies 20,900,000, Equipment 28,000,000, Other Direct Costs 55,500,000. Contingency 137,904,988 = Σ(P − M), overrun theo phase 1.1 15%, 1.2 20%, 1.3 40%, 1.4 40%, 1.5 35%, 1.6 30%, 1.7 15% (theo phase: 8,429,891 / 26,802,470 / 24,184,535 / 24,999,699 / 27,811,401 / 15,785,776 / 9,891,216; riêng 1.2.7 = 12,292,906 ≈ 22 TB CDN). WP estimates 649,099,036; warranty 71,822,880 (Hiếu 240 h + A 240 h, ngoài WBS); cost baseline 720,921,916; management reserve 5% = 36,046,096 (chỉ Sponsor giải ngân); budget 757,000,000.
+- **Quyền PM:** tự duyệt thay đổi **tối đa 2% ngân sách (15,140,000) VÀ tối đa 3 ngày**; vượt một trong hai thì trình Sponsor. Viết thống nhất "up to 2% … and up to 3 days".
+- **Chất lượng:** tại release candidate (M-06) không còn lỗi S1/S2. NFR-01: tới 15,000 user, error rate < 1%; NFR-02: p90 < 200 ms; backend coverage ≥ 70%; UAT ≥ 4.2/5; crash-free ≥ 99%.
+- **Yêu cầu:** FR-02 gồm xóa tài khoản và dữ liệu cá nhân; FR-09: phát lệch ≤ 2 s so với đồng hồ công chiếu, chat ≤ 1 s, 15,000 user.
+- **Milestone:** M-01 Sep 18 (SRS/RTM sign-off) · M-02 Oct 1 (PMP approved) · M-03 Oct 21 (design approved) · M-04 Nov 20 (MVP) · M-05 Dec 7 (all functions) · M-06 Dec 18 (RC) · M-07 Jan 4 (UAT sign-off) · M-08 Jan 15 (apps handed over) · M-09 Jan 15 (project closed). Charter: mỗi milestone không trễ quá 14 ngày.
+- **Quản lý dự án:** 1.7.1 PMP Sep 16–29; 1.7.3 năm báo cáo cuối tháng Sep 11; Oct 15–16; Nov 13 và 16; Dec 10–11; Jan 14–15; 1.7.4 tám buổi review rủi ro Oct 14, Oct 28, Nov 11, Nov 25, Dec 9, Dec 23, Jan 5, Jan 13. 1.3.5 (A, Nov 5–11) gồm 3 kiểm tra sớm: k6 1,000 kết nối WebSocket (R-02), OWASP ZAP baseline (R-08), đo khởi động Galaxy A07 / iPhone 11 (R-11).
 
-## 6. Risk Register (Book of Forms 2.32, tr. vật lý 139–141) — đã xong
-- Cột theo sách: ID | Risk Statement | Owner | Probability | Impact (Scope / Quality / Schedule / Cost) | Score | Response | Revised Probability | Revised Impact (…) | Revised Score | Responsible Party | Actions | Status | Comments. Câu risk statement dạng "If CONDITION, EVENT may occur, leading to EFFECT".
-- Khớp với: Charter Overall Project Risk (4 rủi ro, ghi R-01..R-04 ở cuối mỗi ý), Assumption Log A-13/A-14 (R-05/R-06), ACE 1.3.3 + overrun 40% (R-02/R-03), PR-04 (R-07), QMP (R-08, R-11, R-12), Luật BVDLCN (R-09), Team Charter (R-10).
-- Owner và Responsible Party là người trong nhóm; ngày review khớp các buổi 1.7.4; tiền lấy từ contingency của phase tương ứng hoặc management reserve.
+## 6. Công cụ (lấy từ git `78bf038~1:tools/`, chạy ở scratchpad)
+- `dlib.py`: `Repl(root, name)(old, new, expect)` thay chữ xuyên run và kiểm số lần thay; `rows`, `cells`, `cell_text`, `set_cell_text`, `set_cell_lines`, `find_row`, `set_grid`, `heading_par`, `section_break_par`.
+- `check2.py <xml> <docx>`: kiểm tra chéo docx ↔ 4.xml (WBS, Dictionary, Resource Requirements, ACE, Resource Summary, RTM, Inter-RTM, Risk Register, Stakeholder, Date Prepared một ngày, mã 1.x.y / M-xx phải có trong 4.xml, cụm từ cấm); mã thoát 1 khi có lỗi.
+- `colwidth.py <in> <out> [--dry]`, `footers.py <in> <out>`, `pagecount.py <docx> <pdf> <out>` (bản trong git chỉ đọc footer "Page x of y"; với 4_vi.docx phải nhận thêm "Trang x / y"), `topdf.ps1` (Word COM → PDF), `mspdi.py <xml>` (liệt kê task), `mpxjread.py <xml>`, `fwdpass.py`, `montage.py`, `pdftext.py`.
+- Xuất `schedule.pdf` qua COM (python + pywin32): `gencache.EnsureDispatch("MSProject.Application")` → `FileOpenEx(Name=4.xml, ReadOnly=True, FormatID="MSProject.XML")` → đặt lại mã M-xx theo tên milestone → `ViewApply("Gantt Chart")`, `OutlineShowAllTasks`, `TableEditEx` như macro, `TableApply` → `TimescaleEdit(TierCount=2, MajorUnits=2, MajorAlign=1, MinorUnits=3, MinorAlign=1)` → `FilePageSetupPage(Portrait=False, PagesTall=1, PagesWide=1, PaperSize=25)` → `FilePageSetupView(AllSheetColumns=True, BestPageFitTimescale=True)` → `DocumentExport(Filename, FileType=0)` → `FileCloseEx(0)`, `Quit(0)`. Xong thì render PDF ra ảnh (pymupdf) để tự kiểm tra 1 trang, không cắt chữ.
+- **Lưu ý môi trường (máy hiện tại):**
+  - đặt `PYTHONIOENCODING=utf-8`; `JAVA_HOME="E:/.jdks/ms-17.0.21.0.2"` cho mpxjread;
+  - cache makepy mặc định của MS Project bị hỏng → đặt `win32com.__gen_path__` và `win32com.gen_py.__path__` sang một thư mục riêng ở scratchpad trước khi `EnsureDispatch`;
+  - **không gọi `OptionsViewEx`** (đổi tùy chọn chung của MS Project trên máy user; định dạng ngày của user là 9 = "Mon 8/17/26");
+  - `DocumentExport` bỏ qua FromDate/ToDate (bản in tự chừa ~2 tuần trước Aug 17); `FilePageSetupLegend TextWidth` không có tác dụng (ô legend ~2 in);
+  - `topdf.ps1` gọi `Word.Quit()` → **không chạy khi user đang mở Word** (có file `~$...docx`); khi Word đang mở 4.docx thì không ghi đè được, nhờ user đóng (không lưu);
+  - không kill WINWORD; trong Bash không dùng `cat > file` mà không có heredoc; xóa file trong AA/ thì chuyển bản sao ra scratchpad trước.
 
-## 7. Công cụ (`tools/`) và quy trình
-- `dlib.py`: các hàm hỗ trợ.
-  - `Repl(root, name)(old, new, expect)`: thay chữ có xét nhiều run, kiểm tra số lần thay đúng `expect`.
-  - Đọc/ghi ô: `set_cell_text`, `set_cell_lines`, `rows`, `cells`, `cell_text`, `find_row`.
-  - Bố cục: `set_grid` (độ rộng cột), `heading_par`, `section_break_par`, `page_break_par`.
-- `check2.py <xml> <docx>`: kiểm tra chéo WBS / Dictionary / Resource Requirements / ACE / Resource Summary / Requirements Documentation↔RTM với 4.xml, số TR liên tiếp ở Inter-RTM, score/ID/owner/status của Risk Register, mọi mã 1.x.y / M-xx được nhắc trong docx (trừ RBS, có hệ số riêng) phải có trong 4.xml, cây WBS không có milestone, và các cụm từ cũ không được quay lại (ký hiệu `(A)`, `(SUM)`, "below 2%", "or 3 days", "favourite", "without degradation", "open major"…). Trả mã thoát 1 khi PROBLEMS > 0; báo trùng ID rủi ro.
-- `colwidth.py <in> <out> [--dry]`: căn lại độ rộng cột mọi bảng ≥ 3 cột (và QMP) bằng số đo font Arial thật; các bảng cùng form dùng chung độ rộng (RTM, WBS Dictionary, Risk Register trên/dưới, các bảng con của Basis of Estimates); chọn lại số cột gộp của các dòng 2 ô (Project Title | Date Prepared…). Bỏ qua bìa và Team Charter.
-- `footers.py <in> <out>`: đặt footer Page x of y cho mọi section trừ trang bìa, đánh số lại từ 1.
-- `pagecount.py <docx> <pdf> <out>`: ghi số trang thật của từng section (đọc từ PDF) vào giá trị lưu sẵn của trường SECTIONPAGES. Dùng pymupdf, không có thì dùng pypdf. Nhận cả footer "Page x of y" (4.docx) và "Trang x / y" (4_vi.docx).
-- `topdf.ps1`: Word COM → PDF. Gọi bằng `powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools\topdf.ps1 -Files <docx> -OutDir <dir>` (dùng đường dẫn Windows).
-- `montage.py <pdf> <png> <first> <last> <cols> <dpi>`: ghép ảnh nhiều trang để xem nhanh.
-- `mspdi.py <xml>`: liệt kê task. `fwdpass.py <xml>`: tính lại lịch, phát hiện trùng việc, tính giờ theo tháng.
-- `pdftext.py <pdf> 139-141`: lấy chữ từ giáo trình.
-- `mpxjread.py <xml>`: kiểm tra 4.xml đọc được bằng MPXJ. Cần `JAVA_HOME="E:/.jdks/ms-17.0.21.0.2"` (máy hiện tại); pip `mpxj` và `jpype1` đã cài.
-- `export_gantt.py <4.xml> <out.pdf> <makepy dir>`: mở 4.xml bằng MS Project qua COM (pywin32), dựng bảng như macro và xuất PDF 1 trang; không lưu .mpp; thư mục makepy phải là thư mục riêng (cache mặc định của máy bị hỏng). **Không dùng `OptionsViewEx`**: đó là tùy chọn chung của MS Project trên máy user (định dạng ngày mặc định là 9 = "Mon 8/17/26").
-- `xml_milestones_20261118.py`: script đã chuyển milestone từ nhóm "Milestones" vào cuối từng phase (tự dừng nếu đã làm).
-- **Chỉ để tham khảo** (script tự dừng nếu thay đổi đã có): `reference_edit4.py` (clone title bar, header row, label + box của Charter, clone bảng dữ liệu), `build_rr.py` (dựng Risk Register), `edit5.py` (phiên 04/11/2026: thống nhất ngưỡng/mức lỗi, tiêu đề cột như sách + chú thích, cỡ chữ, bìa, Inter-RTM, keepNext cho bảng con, bỏ đoạn trống trước ngắt section).
-- **Quy trình:**
-  1. Chép 4.docx ra scratchpad.
-  2. Sửa bằng python.
-  3. Chạy `colwidth.py` (nếu nội dung bảng thay đổi), rồi `footers.py`.
-  4. Chạy `check2.py` (phải ra 0).
-  5. Chỉ khi user yêu cầu: chạy `topdf.ps1` + `montage.py` để xem bố cục, rồi `pagecount.py` với PDF vừa xuất.
-  6. Chép kết quả vào AA/ (4.docx và 4.xml cùng lúc).
-- **Lưu ý môi trường Windows:**
-  - đặt `PYTHONIOENCODING=utf-8` (tên tiếng Việt);
-  - trong Bash không dùng `cat > file` mà không có heredoc (lệnh sẽ treo);
-  - lệnh xóa file (`rm`) trong AA/ có thể bị chặn; khi cần bỏ file thì hỏi user hoặc chuyển nó ra scratchpad.
-
-## 8. Việc còn dở
-1. Nhúng `schedule(v3).pdf` vào ô placeholder ở mục 3 khi user yêu cầu. Hỏi user muốn chèn dạng ảnh hay object; nếu thêm trang thì chạy lại `footers.py` + `pagecount.py`.
-2. ~~Cập nhật `4_vi.docx`~~ — XONG 18/11/2026.
-3. ~~Các quyết định đã chốt ngày 18/11/2026~~ — XONG HẾT 18/11/2026 (cả docx và xml) — chi tiết ở cuối `note.txt`, mục "ĐÃ CHỐT (18/11/2026)":
-   - bỏ "revised" khỏi Date Prepared (Charter giữ Aug 27 và viết lại 757,000,000 thành pre-approved budget);
-   - ~~bỏ 9 milestone khỏi WBS, đánh số lại work package~~ — XONG 18/11/2026 (docx + xml; user cần mở 4.xml bằng MS Project để xuất lại schedule.pdf);
-   - Risk Register: thêm R-13 (Minh), R-14 (A); thang 1–5 lên đầu; tách thành 2 bảng; ghi Comments và mã WP cho hành động phòng ngừa;
-   - thêm Stakeholder Register + Stakeholder Analysis (thang 1–5) sau Project Charter;
-   - thêm câu giải thích mức control account cho WBS Dictionary.
-   Làm xong mục nào thì sửa phần mô tả hiện trạng trong BRIEF (mục 4, 5, 6) cho khớp.
+## 7. Việc còn dở
+1. `4_vi.docx` **chưa** chuyển sang bố cục 12 pt / mục lục / bảng tách / nghìn VND (vẫn là bản 7 pt khớp với 4.docx cũ) — chờ user quyết định có cập nhật không.
+2. Các bước dựng bản 12 pt (18/11/2026) chạy ở scratchpad, theo thứ tự: sửa nội dung + tách bảng → định dạng 12/13 pt, mục lục, footer liên tục, keep-with-next → chèn ảnh Gantt → colwidth 12 pt + chiều cao dòng tiêu đề dọc → Word cập nhật trường TOC/footer, lưu docx, xuất PDF → ghi NUMPAGES lưu sẵn + đè Gantt vector vào PDF. check2 đã được chỉnh theo bố cục mới (tách bảng, nghìn VND, Risk 3 bảng) và báo `PROBLEMS: 0`; bản `check2.py` trong git **không** chạy đúng trên bố cục mới.
