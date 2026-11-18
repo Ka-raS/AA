@@ -326,8 +326,8 @@
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-08-17T08:00:00</Start>
-            <Finish>2026-09-18T17:00:00</Finish>
-            <Duration>PT192H0M0S</Duration>
+            <Finish>2026-09-17T17:00:00</Finish>
+            <Duration>PT184H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -341,7 +341,7 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT192H0M0S</RemainingDuration>
+            <RemainingDuration>PT184H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -683,53 +683,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>11</UID>
-            <ID>10</ID>
-            <Name>SRS and RTM signed off (milestone)</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.1.8</WBS>
-            <OutlineNumber>1.1.8</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2026-09-18T17:00:00</Start>
-            <Finish>2026-09-18T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-03: assumes the Customer signs off on this date. Lag 1 day after 1.1.7: the Customer checks the revised SRS and RTM.</Notes>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>10</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>4800</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
             <UID>12</UID>
-            <ID>11</ID>
+            <ID>10</ID>
             <Name>System and Database Design</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -740,8 +695,8 @@
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-08-27T08:00:00</Start>
-            <Finish>2026-10-21T17:00:00</Finish>
-            <Duration>PT312H0M0S</Duration>
+            <Finish>2026-10-20T17:00:00</Finish>
+            <Duration>PT304H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -755,7 +710,7 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT312H0M0S</RemainingDuration>
+            <RemainingDuration>PT304H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -767,7 +722,7 @@
         </Task>
         <Task>
             <UID>13</UID>
-            <ID>12</ID>
+            <ID>11</ID>
             <Name>Design the system architecture</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -813,7 +768,7 @@
         </Task>
         <Task>
             <UID>14</UID>
-            <ID>13</ID>
+            <ID>12</ID>
             <Name>Design the database (ER diagram, schema)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -859,7 +814,7 @@
         </Task>
         <Task>
             <UID>15</UID>
-            <ID>14</ID>
+            <ID>13</ID>
             <Name>Design the wireframes</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -905,7 +860,7 @@
         </Task>
         <Task>
             <UID>16</UID>
-            <ID>15</ID>
+            <ID>14</ID>
             <Name>Design the mockups and prototype</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -958,7 +913,7 @@
         </Task>
         <Task>
             <UID>17</UID>
-            <ID>16</ID>
+            <ID>15</ID>
             <Name>Write the detailed design</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1011,7 +966,7 @@
         </Task>
         <Task>
             <UID>18</UID>
-            <ID>17</ID>
+            <ID>16</ID>
             <Name>Define the general API specification</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1064,7 +1019,7 @@
         </Task>
         <Task>
             <UID>19</UID>
-            <ID>18</ID>
+            <ID>17</ID>
             <Name>Set up the repository, CI/CD, staging and CDN</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1098,7 +1053,7 @@
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-14: assumes the cloud/CDN provider activates the accounts within 2 working days of the purchase (lag 2 days after 1.7.3).</Notes>
+            <Notes>A-14: assumes the cloud/CDN provider activates the accounts within 2 working days of the purchase (lag 2 days after 1.7.2).</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -1112,7 +1067,7 @@
         </Task>
         <Task>
             <UID>20</UID>
-            <ID>19</ID>
+            <ID>18</ID>
             <Name>Review the design with the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1166,7 +1121,7 @@
         </Task>
         <Task>
             <UID>21</UID>
-            <ID>20</ID>
+            <ID>19</ID>
             <Name>Revise the mockups and prototype</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1212,7 +1167,7 @@
         </Task>
         <Task>
             <UID>22</UID>
-            <ID>21</ID>
+            <ID>20</ID>
             <Name>Revise the design and API specification</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1264,60 +1219,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>23</UID>
-            <ID>22</ID>
-            <Name>Design approved by the Customer (milestone)</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.2.11</WBS>
-            <OutlineNumber>1.2.11</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2026-10-21T17:00:00</Start>
-            <Finish>2026-10-21T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-05: assumes the Customer approves the revised design on this date (lag 1 day after 1.2.9 and 1.2.10).</Notes>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>21</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>4800</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>22</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>4800</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
             <UID>24</UID>
-            <ID>23</ID>
+            <ID>21</ID>
             <Name>MVP Development</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1355,7 +1258,7 @@
         </Task>
         <Task>
             <UID>25</UID>
-            <ID>24</ID>
+            <ID>22</ID>
             <Name>Develop the authentication and user API</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1401,7 +1304,7 @@
         </Task>
         <Task>
             <UID>26</UID>
-            <ID>25</ID>
+            <ID>23</ID>
             <Name>Develop the streaming API and CDN integration</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1454,7 +1357,7 @@
         </Task>
         <Task>
             <UID>27</UID>
-            <ID>26</ID>
+            <ID>24</ID>
             <Name>Develop the Live Premiere WebSocket service</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1500,7 +1403,7 @@
         </Task>
         <Task>
             <UID>28</UID>
-            <ID>27</ID>
+            <ID>25</ID>
             <Name>Build the playback and Live Premiere screens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1546,7 +1449,7 @@
         </Task>
         <Task>
             <UID>29</UID>
-            <ID>28</ID>
+            <ID>26</ID>
             <Name>Test the MVP (integration testing)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1620,7 +1523,7 @@
         </Task>
         <Task>
             <UID>30</UID>
-            <ID>29</ID>
+            <ID>27</ID>
             <Name>Demo the MVP to the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1667,7 +1570,7 @@
         </Task>
         <Task>
             <UID>31</UID>
-            <ID>30</ID>
+            <ID>28</ID>
             <Name>Fix MVP defects and demo feedback</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1719,52 +1622,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>32</UID>
-            <ID>31</ID>
-            <Name>MVP completed internally (milestone)</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.3.8</WBS>
-            <OutlineNumber>1.3.8</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2026-11-20T17:00:00</Start>
-            <Finish>2026-11-20T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>31</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
             <UID>33</UID>
-            <ID>32</ID>
+            <ID>29</ID>
             <Name>Full Feature Development</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1802,7 +1661,7 @@
         </Task>
         <Task>
             <UID>34</UID>
-            <ID>33</ID>
+            <ID>30</ID>
             <Name>Develop the discovery and library APIs</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1848,7 +1707,7 @@
         </Task>
         <Task>
             <UID>35</UID>
-            <ID>34</ID>
+            <ID>31</ID>
             <Name>Develop social, notification, admin and receipt APIs</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1894,7 +1753,7 @@
         </Task>
         <Task>
             <UID>36</UID>
-            <ID>35</ID>
+            <ID>32</ID>
             <Name>Build account, discovery, library and social screens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1940,7 +1799,7 @@
         </Task>
         <Task>
             <UID>37</UID>
-            <ID>36</ID>
+            <ID>33</ID>
             <Name>Build download, video, purchase and admin screens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1993,7 +1852,7 @@
         </Task>
         <Task>
             <UID>38</UID>
-            <ID>37</ID>
+            <ID>34</ID>
             <Name>Test all functions (integration testing)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2060,7 +1919,7 @@
         </Task>
         <Task>
             <UID>39</UID>
-            <ID>38</ID>
+            <ID>35</ID>
             <Name>Demo all functions to Customer and Sponsor</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2107,7 +1966,7 @@
         </Task>
         <Task>
             <UID>40</UID>
-            <ID>39</ID>
+            <ID>36</ID>
             <Name>Fix feature defects and demo feedback</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2152,52 +2011,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>41</UID>
-            <ID>40</ID>
-            <Name>All functions complete (milestone)</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.4.8</WBS>
-            <OutlineNumber>1.4.8</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2026-12-07T17:00:00</Start>
-            <Finish>2026-12-07T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>40</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
             <UID>42</UID>
-            <ID>41</ID>
+            <ID>37</ID>
             <Name>Testing and QA</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2207,9 +2022,9 @@
             <OutlineNumber>1.5</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2026-08-17T08:00:00</Start>
+            <Start>2026-09-08T08:00:00</Start>
             <Finish>2026-12-18T17:00:00</Finish>
-            <Duration>PT712H0M0S</Duration>
+            <Duration>PT592H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -2223,7 +2038,7 @@
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT712H0M0S</RemainingDuration>
+            <RemainingDuration>PT592H0M0S</RemainingDuration>
             <ConstraintType>0</ConstraintType>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -2235,7 +2050,7 @@
         </Task>
         <Task>
             <UID>43</UID>
-            <ID>42</ID>
+            <ID>38</ID>
             <Name>Write the test plan and quality metrics</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2282,7 +2097,7 @@
         </Task>
         <Task>
             <UID>44</UID>
-            <ID>43</ID>
+            <ID>39</ID>
             <Name>Create the test case template and test cases</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2335,7 +2150,7 @@
         </Task>
         <Task>
             <UID>45</UID>
-            <ID>44</ID>
+            <ID>40</ID>
             <Name>Run load, security and device tests</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2382,7 +2197,7 @@
         </Task>
         <Task>
             <UID>46</UID>
-            <ID>45</ID>
+            <ID>41</ID>
             <Name>Fix load, security and device test defects</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2428,7 +2243,7 @@
         </Task>
         <Task>
             <UID>47</UID>
-            <ID>46</ID>
+            <ID>42</ID>
             <Name>Write the test summary report</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2481,7 +2296,7 @@
         </Task>
         <Task>
             <UID>48</UID>
-            <ID>47</ID>
+            <ID>43</ID>
             <Name>Review the test report with the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2528,7 +2343,7 @@
         </Task>
         <Task>
             <UID>49</UID>
-            <ID>48</ID>
+            <ID>44</ID>
             <Name>Fix the test review defects</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2573,52 +2388,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>50</UID>
-            <ID>49</ID>
-            <Name>Release candidate ready for UAT (milestone)</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.5.8</WBS>
-            <OutlineNumber>1.5.8</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2026-12-18T17:00:00</Start>
-            <Finish>2026-12-18T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>49</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
             <UID>51</UID>
-            <ID>50</ID>
+            <ID>45</ID>
             <Name>Deployment and Closeout</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2656,7 +2427,7 @@
         </Task>
         <Task>
             <UID>52</UID>
-            <ID>51</ID>
+            <ID>46</ID>
             <Name>Deploy the release candidate to staging</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2702,7 +2473,7 @@
         </Task>
         <Task>
             <UID>53</UID>
-            <ID>52</ID>
+            <ID>47</ID>
             <Name>Fix the defects reported in UAT</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2748,60 +2519,15 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>54</UID>
-            <ID>53</ID>
-            <Name>Customer acceptance sign-off (milestone)</Name>
+            <UID>55</UID>
+            <ID>48</ID>
+            <Name>Deploy to production</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <WBS>1.6.3</WBS>
             <OutlineNumber>1.6.3</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-01-04T17:00:00</Start>
-            <Finish>2027-01-04T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-09: assumes the Customer finishes UAT and signs acceptance on this date (lag 1 day after 1.6.2 to retest the fixes).</Notes>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>53</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>4800</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>55</UID>
-            <ID>54</ID>
-            <Name>Deploy to production</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.6.4</WBS>
-            <OutlineNumber>1.6.4</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-05T08:00:00</Start>
@@ -2840,14 +2566,14 @@
         </Task>
         <Task>
             <UID>56</UID>
-            <ID>55</ID>
+            <ID>49</ID>
             <Name>Provide post-release hypercare</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.5</WBS>
-            <OutlineNumber>1.6.5</OutlineNumber>
+            <WBS>1.6.4</WBS>
+            <OutlineNumber>1.6.4</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-08T08:00:00</Start>
@@ -2886,14 +2612,14 @@
         </Task>
         <Task>
             <UID>57</UID>
-            <ID>56</ID>
+            <ID>50</ID>
             <Name>Submit the apps to App Store and Google Play</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.6</WBS>
-            <OutlineNumber>1.6.6</OutlineNumber>
+            <WBS>1.6.5</WBS>
+            <OutlineNumber>1.6.5</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-08T08:00:00</Start>
@@ -2933,14 +2659,14 @@
         </Task>
         <Task>
             <UID>58</UID>
-            <ID>57</ID>
+            <ID>51</ID>
             <Name>Train the Customer administrators</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.7</WBS>
-            <OutlineNumber>1.6.7</OutlineNumber>
+            <WBS>1.6.6</WBS>
+            <OutlineNumber>1.6.6</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-12T08:00:00</Start>
@@ -2980,14 +2706,14 @@
         </Task>
         <Task>
             <UID>59</UID>
-            <ID>58</ID>
+            <ID>52</ID>
             <Name>Write the user and admin guides, release notes</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.8</WBS>
-            <OutlineNumber>1.6.8</OutlineNumber>
+            <WBS>1.6.7</WBS>
+            <OutlineNumber>1.6.7</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-12-08T08:00:00</Start>
@@ -3026,14 +2752,14 @@
         </Task>
         <Task>
             <UID>60</UID>
-            <ID>59</ID>
+            <ID>53</ID>
             <Name>Write the deployment and operations guide</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.9</WBS>
-            <OutlineNumber>1.6.9</OutlineNumber>
+            <WBS>1.6.8</WBS>
+            <OutlineNumber>1.6.8</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-12-23T08:00:00</Start>
@@ -3072,14 +2798,14 @@
         </Task>
         <Task>
             <UID>61</UID>
-            <ID>60</ID>
+            <ID>54</ID>
             <Name>Review the handover with the Customer</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.10</WBS>
-            <OutlineNumber>1.6.10</OutlineNumber>
+            <WBS>1.6.9</WBS>
+            <OutlineNumber>1.6.9</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-06T08:00:00</Start>
@@ -3105,7 +2831,7 @@
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-11: assumes the Customer is available for the handover review on these dates. Lag 2 days after 1.6.8 and 1.6.9: the documents are sent in advance.</Notes>
+            <Notes>A-11: assumes the Customer is available for the handover review on these dates. Lag 2 days after 1.6.7 and 1.6.8: the documents are sent in advance.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -3126,14 +2852,14 @@
         </Task>
         <Task>
             <UID>62</UID>
-            <ID>61</ID>
+            <ID>55</ID>
             <Name>Revise the handover documents</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.6.11</WBS>
-            <OutlineNumber>1.6.11</OutlineNumber>
+            <WBS>1.6.10</WBS>
+            <OutlineNumber>1.6.10</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-08T08:00:00</Start>
@@ -3171,74 +2897,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>63</UID>
-            <ID>62</ID>
-            <Name>Apps published and handed over (milestone)</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.6.12</WBS>
-            <OutlineNumber>1.6.12</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-01-15T17:00:00</Start>
-            <Finish>2027-01-15T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-11, A-13: assumes the Customer accepts the handover on this date and the App Store / Google Play review takes at most 3 working days (lag 3 days after 1.6.6).</Notes>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>57</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>14400</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>58</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>56</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>62</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
             <UID>64</UID>
-            <ID>63</ID>
+            <ID>56</ID>
             <Name>Project Management</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -3276,7 +2936,7 @@
         </Task>
         <Task>
             <UID>65</UID>
-            <ID>64</ID>
+            <ID>57</ID>
             <Name>Develop the Project Management Plan</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -3321,60 +2981,15 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>66</UID>
-            <ID>65</ID>
-            <Name>Project Management Plan approved (milestone)</Name>
+            <UID>67</UID>
+            <ID>58</ID>
+            <Name>Procure cloud, CDN, devices and test tools</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
             <WBS>1.7.2</WBS>
             <OutlineNumber>1.7.2</OutlineNumber>
-            <OutlineLevel>3</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2026-10-01T17:00:00</Start>
-            <Finish>2026-10-01T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <ConstraintType>0</ConstraintType>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-04: assumes the Sponsor reviews the plan during the 2-day lag and approves it on this date.</Notes>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>65</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>9600</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>67</UID>
-            <ID>66</ID>
-            <Name>Procure cloud, CDN, devices and test tools</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>1.7.3</WBS>
-            <OutlineNumber>1.7.3</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-10-02T08:00:00</Start>
@@ -3413,14 +3028,14 @@
         </Task>
         <Task>
             <UID>68</UID>
-            <ID>67</ID>
+            <ID>59</ID>
             <Name>Track progress and report status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.4</WBS>
-            <OutlineNumber>1.7.4</OutlineNumber>
+            <WBS>1.7.3</WBS>
+            <OutlineNumber>1.7.3</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-09-11T08:00:00</Start>
@@ -3452,14 +3067,14 @@
         </Task>
         <Task>
             <UID>74</UID>
-            <ID>68</ID>
+            <ID>60</ID>
             <Name>Report Month 1 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.4.1</WBS>
-            <OutlineNumber>1.7.4.1</OutlineNumber>
+            <WBS>1.7.3.1</WBS>
+            <OutlineNumber>1.7.3.1</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-09-11T08:00:00</Start>
@@ -3486,7 +3101,7 @@
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Month 1 (Aug 17 - Sep 16): progress against the Charter milestones and labor hours; 1 day because the cost baseline is approved only on Oct 1 (1.7.2).</Notes>
+            <Notes>Month 1 (Aug 17 - Sep 16): progress against the Charter milestones and labor hours; 1 day because the cost baseline is approved only on Oct 1 (M-02).</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -3500,14 +3115,14 @@
         </Task>
         <Task>
             <UID>75</UID>
-            <ID>69</ID>
+            <ID>61</ID>
             <Name>Report Month 2 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.4.2</WBS>
-            <OutlineNumber>1.7.4.2</OutlineNumber>
+            <WBS>1.7.3.2</WBS>
+            <OutlineNumber>1.7.3.2</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-10-15T08:00:00</Start>
@@ -3555,14 +3170,14 @@
         </Task>
         <Task>
             <UID>76</UID>
-            <ID>70</ID>
+            <ID>62</ID>
             <Name>Report Month 3 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.4.3</WBS>
-            <OutlineNumber>1.7.4.3</OutlineNumber>
+            <WBS>1.7.3.3</WBS>
+            <OutlineNumber>1.7.3.3</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-11-13T08:00:00</Start>
@@ -3603,14 +3218,14 @@
         </Task>
         <Task>
             <UID>77</UID>
-            <ID>71</ID>
+            <ID>63</ID>
             <Name>Report Month 4 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.4.4</WBS>
-            <OutlineNumber>1.7.4.4</OutlineNumber>
+            <WBS>1.7.3.4</WBS>
+            <OutlineNumber>1.7.3.4</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-12-10T08:00:00</Start>
@@ -3637,7 +3252,7 @@
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Month 4 (Nov 17 - Dec 16): held before Dec 14-21, when the PM reviews the test summary report (1.5.6) and writes the final report (1.7.6).</Notes>
+            <Notes>Month 4 (Nov 17 - Dec 16): held before Dec 14-21, when the PM reviews the test summary report (1.5.6) and writes the final report (1.7.5).</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -3651,14 +3266,14 @@
         </Task>
         <Task>
             <UID>78</UID>
-            <ID>72</ID>
+            <ID>64</ID>
             <Name>Report Month 5 status and cost</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.4.5</WBS>
-            <OutlineNumber>1.7.4.5</OutlineNumber>
+            <WBS>1.7.3.5</WBS>
+            <OutlineNumber>1.7.3.5</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-14T08:00:00</Start>
@@ -3699,14 +3314,14 @@
         </Task>
         <Task>
             <UID>69</UID>
-            <ID>73</ID>
+            <ID>65</ID>
             <Name>Monitor risks and manage change requests</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5</WBS>
-            <OutlineNumber>1.7.5</OutlineNumber>
+            <WBS>1.7.4</WBS>
+            <OutlineNumber>1.7.4</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-10-14T08:00:00</Start>
@@ -3738,14 +3353,14 @@
         </Task>
         <Task>
             <UID>79</UID>
-            <ID>74</ID>
+            <ID>66</ID>
             <Name>Review risks and changes (1 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.1</WBS>
-            <OutlineNumber>1.7.5.1</OutlineNumber>
+            <WBS>1.7.4.1</WBS>
+            <OutlineNumber>1.7.4.1</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-10-14T08:00:00</Start>
@@ -3786,14 +3401,14 @@
         </Task>
         <Task>
             <UID>80</UID>
-            <ID>75</ID>
+            <ID>67</ID>
             <Name>Review risks and changes (2 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.2</WBS>
-            <OutlineNumber>1.7.5.2</OutlineNumber>
+            <WBS>1.7.4.2</WBS>
+            <OutlineNumber>1.7.4.2</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-10-28T08:00:00</Start>
@@ -3834,14 +3449,14 @@
         </Task>
         <Task>
             <UID>81</UID>
-            <ID>76</ID>
+            <ID>68</ID>
             <Name>Review risks and changes (3 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.3</WBS>
-            <OutlineNumber>1.7.5.3</OutlineNumber>
+            <WBS>1.7.4.3</WBS>
+            <OutlineNumber>1.7.4.3</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-11-11T08:00:00</Start>
@@ -3882,14 +3497,14 @@
         </Task>
         <Task>
             <UID>82</UID>
-            <ID>77</ID>
+            <ID>69</ID>
             <Name>Review risks and changes (4 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.4</WBS>
-            <OutlineNumber>1.7.5.4</OutlineNumber>
+            <WBS>1.7.4.4</WBS>
+            <OutlineNumber>1.7.4.4</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-11-25T08:00:00</Start>
@@ -3930,14 +3545,14 @@
         </Task>
         <Task>
             <UID>83</UID>
-            <ID>78</ID>
+            <ID>70</ID>
             <Name>Review risks and changes (5 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.5</WBS>
-            <OutlineNumber>1.7.5.5</OutlineNumber>
+            <WBS>1.7.4.5</WBS>
+            <OutlineNumber>1.7.4.5</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-12-09T08:00:00</Start>
@@ -3978,14 +3593,14 @@
         </Task>
         <Task>
             <UID>84</UID>
-            <ID>79</ID>
+            <ID>71</ID>
             <Name>Review risks and changes (6 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.6</WBS>
-            <OutlineNumber>1.7.5.6</OutlineNumber>
+            <WBS>1.7.4.6</WBS>
+            <OutlineNumber>1.7.4.6</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-12-23T08:00:00</Start>
@@ -4026,14 +3641,14 @@
         </Task>
         <Task>
             <UID>85</UID>
-            <ID>80</ID>
+            <ID>72</ID>
             <Name>Review risks and changes (7 of 8)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.7</WBS>
-            <OutlineNumber>1.7.5.7</OutlineNumber>
+            <WBS>1.7.4.7</WBS>
+            <OutlineNumber>1.7.4.7</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-05T08:00:00</Start>
@@ -4074,14 +3689,14 @@
         </Task>
         <Task>
             <UID>86</UID>
-            <ID>81</ID>
+            <ID>73</ID>
             <Name>Review risks and changes (8 of 8, final)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.5.8</WBS>
-            <OutlineNumber>1.7.5.8</OutlineNumber>
+            <WBS>1.7.4.8</WBS>
+            <OutlineNumber>1.7.4.8</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-13T08:00:00</Start>
@@ -4122,14 +3737,14 @@
         </Task>
         <Task>
             <UID>70</UID>
-            <ID>82</ID>
+            <ID>74</ID>
             <Name>Write the lessons learned and final report</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.6</WBS>
-            <OutlineNumber>1.7.6</OutlineNumber>
+            <WBS>1.7.5</WBS>
+            <OutlineNumber>1.7.5</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2026-12-15T08:00:00</Start>
@@ -4168,14 +3783,14 @@
         </Task>
         <Task>
             <UID>71</UID>
-            <ID>83</ID>
+            <ID>75</ID>
             <Name>Review the final report with the Sponsor</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.7</WBS>
-            <OutlineNumber>1.7.7</OutlineNumber>
+            <WBS>1.7.6</WBS>
+            <OutlineNumber>1.7.6</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-08T08:00:00</Start>
@@ -4201,7 +3816,7 @@
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>A-12: assumes the Sponsor is available for the final report review on this date. Lag 2 days after 1.7.6: the report is sent in advance.</Notes>
+            <Notes>A-12: assumes the Sponsor is available for the final report review on this date. Lag 2 days after 1.7.5: the report is sent in advance.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -4222,14 +3837,14 @@
         </Task>
         <Task>
             <UID>72</UID>
-            <ID>84</ID>
+            <ID>76</ID>
             <Name>Revise the final report and close the project</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.8</WBS>
-            <OutlineNumber>1.7.8</OutlineNumber>
+            <WBS>1.7.7</WBS>
+            <OutlineNumber>1.7.7</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-11T08:00:00</Start>
@@ -4267,15 +3882,438 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>73</UID>
-            <ID>85</ID>
-            <Name>Project closed by the Sponsor (milestone)</Name>
+            <UID>87</UID>
+            <ID>77</ID>
+            <Name>Milestones</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>M</WBS>
+            <OutlineNumber>1.8</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-09-18T17:00:00</Start>
+            <Finish>2027-01-15T17:00:00</Finish>
+            <Duration>PT672H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>1</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT672H0M0S</RemainingDuration>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+        </Task>
+        <Task>
+            <UID>11</UID>
+            <ID>78</ID>
+            <Name>SRS and RTM signed off</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>1.7.9</WBS>
-            <OutlineNumber>1.7.9</OutlineNumber>
+            <WBS>M-01</WBS>
+            <OutlineNumber>1.8.1</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-09-18T17:00:00</Start>
+            <Finish>2026-09-18T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>A-03: assumes the Customer signs off on this date. Lag 1 day after 1.1.7: the Customer checks the revised SRS and RTM.</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>10</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>4800</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>66</UID>
+            <ID>79</ID>
+            <Name>Project Management Plan approved</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-02</WBS>
+            <OutlineNumber>1.8.2</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-10-01T17:00:00</Start>
+            <Finish>2026-10-01T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>A-04: assumes the Sponsor reviews the plan during the 2-day lag and approves it on this date.</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>65</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>9600</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>23</UID>
+            <ID>80</ID>
+            <Name>Design approved by the Customer</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-03</WBS>
+            <OutlineNumber>1.8.3</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-10-21T17:00:00</Start>
+            <Finish>2026-10-21T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>A-05: assumes the Customer approves the revised design on this date (lag 1 day after 1.2.9 and 1.2.10).</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>21</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>4800</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>22</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>4800</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>32</UID>
+            <ID>81</ID>
+            <Name>MVP completed internally</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-04</WBS>
+            <OutlineNumber>1.8.4</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-11-20T17:00:00</Start>
+            <Finish>2026-11-20T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>31</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>41</UID>
+            <ID>82</ID>
+            <Name>All functions complete</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-05</WBS>
+            <OutlineNumber>1.8.5</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-12-07T17:00:00</Start>
+            <Finish>2026-12-07T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>40</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>50</UID>
+            <ID>83</ID>
+            <Name>Release candidate ready for UAT</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-06</WBS>
+            <OutlineNumber>1.8.6</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2026-12-18T17:00:00</Start>
+            <Finish>2026-12-18T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>49</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>54</UID>
+            <ID>84</ID>
+            <Name>Customer acceptance sign-off</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-07</WBS>
+            <OutlineNumber>1.8.7</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-01-04T17:00:00</Start>
+            <Finish>2027-01-04T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>A-09: assumes the Customer finishes UAT and signs acceptance on this date (lag 1 day after 1.6.2 to retest the fixes).</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>53</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>4800</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>63</UID>
+            <ID>85</ID>
+            <Name>Apps published and handed over</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-08</WBS>
+            <OutlineNumber>1.8.8</OutlineNumber>
+            <OutlineLevel>3</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-01-15T17:00:00</Start>
+            <Finish>2027-01-15T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <ConstraintType>0</ConstraintType>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>A-11, A-13: assumes the Customer accepts the handover on this date and the App Store / Google Play review takes at most 3 working days (lag 3 days after 1.6.5).</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>57</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>14400</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>58</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>56</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>62</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>73</UID>
+            <ID>86</ID>
+            <Name>Project closed by the Sponsor</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>M-09</WBS>
+            <OutlineNumber>1.8.9</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-01-15T17:00:00</Start>

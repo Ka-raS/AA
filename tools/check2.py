@@ -13,7 +13,7 @@ for u in order:
     if not t["wbs"]: continue
     if t["wbs"].count(".") == 3:
         sess.setdefault(t["wbs"].rsplit(".", 1)[0], []).append(t)
-    elif t["summ"] != "1" or t["wbs"] in ("1.7.4", "1.7.5"):
+    elif t["summ"] != "1" or t["wbs"] in ("1.7.3", "1.7.4"):
         S[t["wbs"]] = t
 RATE = {"Minh": 206067, "Đại": 118566, "Hiếu": 175001, "A": 124261, "Thu": 198818}
 FULL = {"Minh": "Trần Vũ Tiến Minh", "Đại": "Nguyễn Phú Đại", "Hiếu": "Trần Đình Hiếu", "A": "Trần Văn A", "Thu": "Lê Quang Thu"}
@@ -82,7 +82,7 @@ for t in by_title("RESOURCE REQUIREMENTS"):
                 if not row[3].startswith(exp): bad(f"ResReq {w} '{row[3][:45]}' expected '{exp}'")
             if S[w]["name"] not in row[4]: bad(f"ResReq {w} activity text")
             if INV.get(row[1].split("(")[-1].rstrip(")").strip()) != who[w]: bad(f"ResReq {w} person")
-missing = [w for w in S if S[w]["ms"] != "1" and w not in seen and w not in ("1.7.4", "1.7.5") or (w in ("1.7.4", "1.7.5") and w not in seen)]
+missing = [w for w in S if S[w]["ms"] != "1" and w not in seen and w not in ("1.7.3", "1.7.4") or (w in ("1.7.3", "1.7.4") and w not in seen)]
 missing = [w for w in missing if S[w]["ms"] != "1"]
 if missing: bad(f"ResReq missing {missing}")
 # Activity cost estimates
@@ -143,6 +143,38 @@ for pat in ["cost.docx", "resource.docx", "quality.docx", "Function List", "SRS 
             "(SUM)", "Score (C =", "Hours (A)", "(B1:B4)", "below 2%", "under 2%", "or 3 days", "favourite", "without performance degradation",
             "without degradation", "oldest supported", "open major", "if time allows", "reflect stated inputs", "in real time", "24 TB"]:
     if pat in alltext: bad(f"leftover phrase: {pat}")
+# every WBS code (1.x.y[.z]) and milestone code (M-xx) cited in the document exists in 4.xml;
+# milestones are not part of the WBS (no M-xx or "(milestone)" in the WBS tree)
+xml_codes = {t["wbs"] for t in tasks.values()}
+rbs_ps = {id(p) for t in by_title("RESOURCE BREAKDOWN STRUCTURE") for p in t.iter(q("p"))}  # RBS has its own numbering
+wbs_text = "\n".join(p_text(p) for p in body.iter(q("p")) if id(p) not in rbs_ps)
+for c in sorted(set(re.findall(r"(?<![\d.])1\.[1-7]\.\d+(?:\.\d+)?(?!\.?\d)|\bM-\d\d\b", wbs_text))):
+    if c not in xml_codes: bad(f"code {c} cited in the document is not in 4.xml")
+for c in re.findall(r"\bM-\d\d\b", alltext):
+    t = next(x for x in tasks.values() if x["wbs"] == c)
+    if t["ms"] != "1": bad(f"{c} is not a milestone in 4.xml")
+for t in by_title("WORK BREAKDOWN STRUCTURE"):
+    if any(re.match(r"M-\d\d|.*\(milestone\)", ln) for ln in R(t)[2][0].split("\n")): bad("WBS tree still lists a milestone")
+for t in tasks.values():
+    if t["ms"] == "1" and not re.fullmatch(r"M-\d\d", t["wbs"]): bad(f"milestone {t['wbs']} has a WBS code in 4.xml")
+    if "(milestone)" in t["name"]: bad(f"4.xml name still has '(milestone)': {t['wbs']}")
+# Stakeholder Register classification = Internal/External + engagement level from the Stakeholder Analysis scores
+sr, sa = by_title("STAKEHOLDER REGISTER"), by_title("STAKEHOLDER ANALYSIS")
+if sr and sa:
+    reg = {row[0]: row for row in R(sr[0])[3:]}
+    ana = {row[0]: row for row in R(sa[0])[3:]}
+    if list(reg) != list(ana): bad("Stakeholder Register and Analysis list different stakeholders")
+    for k, row in ana.items():
+        i, f = int(row[1].split(":")[0]), int(row[2].split(":")[0])
+        lvl = "Manage closely" if f >= 4 and i >= 4 else "Keep satisfied" if f >= 4 else "Keep informed" if i >= 4 else "Monitor"
+        if k in reg and not reg[k][5].endswith(lvl): bad(f"Stakeholder {k}: classification '{reg[k][5]}' vs analysis {i}/{f} -> {lvl}")
+        if row[3] not in ("Supportive", "Neutral", "Resistant"): bad(f"Stakeholder {k}: attitude '{row[3]}'")
+    print("Stakeholders:", len(reg))
+# Date Prepared holds one date only
+for t in tbls:
+    for row in R(t)[:2]:
+        for c in row:
+            if c.startswith("Date Prepared:") and not re.fullmatch(r"Date Prepared: [A-Z][a-z]+ \d{1,2}, \d{4}", c): bad(f"Date Prepared cell '{c}'")
 # Inter-RTM: technical requirements numbered TR-01.. in table order
 irtm = by_title("INTER-REQUIREMENTS TRACEABILITY MATRIX")
 if irtm:
@@ -151,13 +183,15 @@ if irtm:
     print("Inter-RTM:", len(trs), "technical requirements")
 # Risk register: each "RISK REGISTER" table (ID..Response) is followed by its lower table (ID, Revised..Comments)
 up, low = {}, {}
-for t in by_title("RISK REGISTER"):
-    lt = t.getnext()
-    while lt is not None and lt.tag != q("tbl"): lt = lt.getnext()
+# (Risk Statement table: ID..Response; Actions table: ID, Revised Probability..Comments)
+for t in tbls:
+    hdr = R(t)[0]
+    if hdr[0] != "ID": continue
+    tgt = up if "Risk Statement" in hdr else low if "Revised Probability" in hdr else None
+    if tgt is None: continue
     for row in R(t):
-        if re.fullmatch(r"R-\d\d", row[0]): up[row[0]] = row
-    for row in R(lt):
-        if re.fullmatch(r"R-\d\d", row[0]): low[row[0]] = row
+        if re.fullmatch(r"R-\d\d", row[0]): tgt[row[0]] = row
+if not up: bad("RiskReg: Risk Statement table not found")
 if up:
     if list(up) != list(low): bad("RiskReg: upper and lower IDs differ")
     if list(up) != [f"R-{i:02d}" for i in range(1, len(up) + 1)]: bad("RiskReg: IDs not consecutive")

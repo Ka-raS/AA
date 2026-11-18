@@ -287,7 +287,7 @@ if __name__ == "__main__":
             groups.append((name, g))
     group(lambda t: first(t).startswith("REQUIREMENTS TRACEABILITY MATRIX"), "RTM")
     group(lambda t: first(t).startswith("WBS DICTIONARY") and "RESOURCE SUMMARY" not in first(t), "WBS Dictionary")
-    group(lambda t: first(t).startswith("RISK REGISTER"), "Risk Register (upper)")
+    group(lambda t: first(t).startswith("RISK REGISTER") or (first(t) == "ID" and "Risk Statement" in el_text(rows(t)[0])), "Risk Register (title + Risk Statement table)")
     group(lambda t: first(t) == "ID" and "Revised Probability" in el_text(rows(t)[0]), "Risk Register (lower)")
     group(lambda t: first(t).startswith(("Project budget (bottom-up)", "1.2.7 Cloud", "1.5.3 Reference", "1.5.3 Load-testing")), "Basis of Estimates sub-tables")
     for t in tbls:
